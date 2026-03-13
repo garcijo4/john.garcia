@@ -1,7 +1,9 @@
 # John Garcia - Faculty Portfolio
 
+**Live Site:** [https://garcijo4.github.io/john.garcia/](https://garcijo4.github.io/john.garcia/)
+
 This is the source code for the personal portfolio website of John Garcia.
-Built using semantic HTML5 and vanilla CSS, following WCAG AA accessibility standards.
+Built using semantic HTML5 and vanilla CSS.
 
 ## Project Files
 - `index.html`: The main landing page including the profile, bio, contact links, and a preview of selected research/projects.
