@@ -2,6 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select all sections that have an ID and all nav links
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.main-nav a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav ul');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('is-open');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                mainNav.classList.remove('is-open');
+            });
+        });
+    }
 
     // Options for the Intersection Observer
     // The margin offsets the sticky header height so it triggers at the right visual spot

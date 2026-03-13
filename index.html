@@ -5,8 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="John Garcia — Assistant Professor of Finance & Analytics at California Lutheran University. Research in behavioral finance, sentiment analysis, and machine learning.">
+        content="John Garcia — Associate Professor of Finance & Analytics at California Lutheran University. Research in behavioral finance, sentiment analysis, and machine learning.">
     <title>John Garcia — Finance & Analytics</title>
+    
+    <!-- Open Graph and SEO Meta Tags -->
+    <meta property="og:title" content="John Garcia — Finance & Analytics | Cal Lutheran">
+    <meta property="og:description" content="From immigrant field worker roots to finance researcher — bridging industry and academia.">
+    <meta property="og:image" content="https://garcijo4.github.io/john.garcia/assets/profile.jpg">
+    <meta property="og:url" content="https://garcijo4.github.io/john.garcia/">
+    
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "John Garcia",
+      "jobTitle": "Associate Professor of Finance & Analytics",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "California Lutheran University"
+      },
+      "url": "https://garcijo4.github.io/john.garcia/",
+      "sameAs": [
+        "https://www.linkedin.com/in/johngarcia4/",
+        "https://orcid.org/0000-0002-7062-0032"
+      ]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +51,19 @@
     <header class="site-header">
         <div class="container header-inner">
             <h1 class="site-title"><a href="index.html">John Garcia</a></h1>
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#news">Updates</a></li>
                     <li><a href="#story">My Story</a></li>
                     <li><a href="#expertise">Expertise</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#awards">Awards &amp; Service</a></li>
@@ -48,7 +82,7 @@
                 </div>
                 <div class="profile-content">
                     <h2 class="name">John Garcia</h2>
-                    <p class="title">Assistant Professor of Finance &amp; Analytics &middot; Cal Lutheran</p>
+                    <p class="title">Associate Professor of Finance &amp; Analytics &middot; Cal Lutheran <br><span style="font-size:0.85em; opacity:0.8;">(effective Fall 2026)</span></p>
 
                     <div class="bio">
                         <p class="tagline">From immigrant field worker roots to finance researcher — bridging industry
@@ -64,19 +98,42 @@
                             rel="noopener noreferrer">Download CV</a>
                         <a href="https://www.linkedin.com/in/johngarcia4/" class="button button-icon" target="_blank"
                             rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                        </a>
+                        <a href="https://orcid.org/0000-0002-7062-0032" class="button button-icon" target="_blank"
+                            rel="noopener noreferrer" aria-label="ORCID" title="ORCID">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.856 5.016h-3.388V7.416zm1.444 1.303v7.44h1.975c3.228 0 4.144-2.19 4.144-3.725 0-1.556-1.053-3.715-4.04-3.715h-2.08z"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Recent News Section -->
+        <section id="news" class="news-section bg-alternate container">
+            <h3>Recent Updates</h3>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <span class="timeline-year">Mar 2026</span>
+                    <div class="timeline-content">
+                        <strong>Tenure and Promotion to Associate Professor</strong>
+                        <span class="timeline-org">California Lutheran University</span>
+                        <p class="timeline-detail">Effective Fall 2026.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">January 2026</span>
+                    <div class="timeline-content">
+                        <strong>Paper Accepted</strong>
+                        <span class="timeline-org">Review of Behavioral Finance</span>
+                        <p class="timeline-detail">"A Stabilizing Force? How Religiosity Moderates the Effect of Sentiment on Stock Liquidity" accepted for publication.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
         <!-- My Story Section -->
-        <section id="story" class="story-section container">
+        <section id="story" class="story-section bg-default container">
             <h3>My Story</h3>
             <div class="story-content">
                 <p>I am an educator and finance researcher who transitioned to academia after 21+ years of executive
@@ -90,7 +147,7 @@
 
 
         <!-- Areas of Expertise Section -->
-        <section id="expertise" class="expertise-section container">
+        <section id="expertise" class="expertise-section bg-alternate container">
             <h3>Areas of Expertise</h3>
             <div class="expertise-categories">
                 <h4 class="subsection-heading">Finance &amp; Strategy</h4>
@@ -121,7 +178,7 @@
 
 
         <!-- Education Section -->
-        <section id="education" class="education-section container">
+        <section id="education" class="education-section bg-default container">
             <h3>Education &amp; Credentials</h3>
             <ul class="timeline-list">
                 <li class="timeline-item">
@@ -169,8 +226,45 @@
         </section>
 
 
+        <!-- Teaching Section -->
+        <section id="teaching" class="teaching-section bg-alternate container">
+            <h3>Teaching</h3>
+            <div class="teaching-content">
+                <p>I teach 8+ courses across undergraduate, MBA, and EMBA levels, integrating analytics, finance, and artificial intelligence into the business curriculum. My median instructor evaluation is <strong>4.8 / 5.0</strong>.</p>
+                
+                <div class="course-table-container">
+                    <table class="course-table">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>UNIV-3ST Generative AI Literacy</td>
+                                <td>Undergraduate</td>
+                            </tr>
+                            <tr>
+                                <td>BUS-356 Business Analytics II</td>
+                                <td>Undergraduate</td>
+                            </tr>
+                            <tr>
+                                <td>MBA 526 Business Analytics</td>
+                                <td>MBA</td>
+                            </tr>
+                            <tr>
+                                <td>Additional courses in Machine Learning &amp; FinTech</td>
+                                <td>UG / Grad</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
         <!-- Research & Publications Section -->
-        <section id="research" class="research-section container">
+        <section id="research" class="research-section bg-default container">
             <h3>Research &amp; Publications</h3>
 
             <!-- Research Interests -->
@@ -307,7 +401,7 @@
             <h4 class="subsection-heading">Working Papers</h4>
             <ol class="publication-list">
                 <li class="pub-item">
-                    <span class="pub-year">2025</span>
+                    <span class="pub-year">2026</span>
                     <div class="pub-content">
                         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="pub-doi"
                             target="_blank" rel="noopener noreferrer">SSRN</a> <strong>&ldquo;Algorithmic Anchoring: How
@@ -320,6 +414,7 @@
                         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5901742" class="pub-doi"
                             target="_blank" rel="noopener noreferrer">SSRN</a> <strong>&ldquo;Homo Silicus is
                             Hyper-Rational: Why LLM Agents Fail to Replicate Attention-Driven Trading&rdquo;</strong>
+                        <span class="pub-status">Presented at SWFA 2026</span>
                     </div>
                 </li>
                 <li class="pub-item">
@@ -328,6 +423,7 @@
                         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5764593" class="pub-doi"
                             target="_blank" rel="noopener noreferrer">SSRN</a> <strong>&ldquo;The Attention Economy of
                             Retail Trading: Evidence from Robinhood and Social Media&rdquo;</strong>
+                        <span class="pub-status">Under review at Journal of Behavioral and Experimental Finance</span>
                     </div>
                 </li>
             </ol>
@@ -335,7 +431,7 @@
 
 
         <!-- Professional Experience Section -->
-        <section id="experience" class="experience-section container">
+        <section id="experience" class="experience-section bg-alternate container">
             <h3>Professional Experience</h3>
 
             <!-- Academic Positions -->
@@ -422,7 +518,7 @@
 
 
         <!-- Awards & Service Section -->
-        <section id="awards" class="awards-section container">
+        <section id="awards" class="awards-section bg-default container">
             <h3>Awards &amp; Service</h3>
 
             <h4 class="subsection-heading">Recognition</h4>

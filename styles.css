@@ -81,18 +81,8 @@ body {
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('assets/background.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    opacity: 0.13; /* Barely perceptible texture */
-    z-index: -1;
-    pointer-events: none;
+    /* Removed background image for a cleaner academic look */
+    content: none;
 }
 
 a {
@@ -125,7 +115,7 @@ a:hover, a:focus {
 .site-header {
     border-bottom: 1px solid rgba(226, 232, 240, 0.6);
     padding: var(--space-lg) 0;
-    margin-bottom: var(--space-xl);
+    margin-bottom: 0;
     /* Sticky header with Glassmorphism */
     position: sticky;
     top: 0;
@@ -140,7 +130,7 @@ a:hover, a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: var(--space-md);
 }
 
@@ -150,22 +140,39 @@ a:hover, a:focus {
     font-weight: bold;
     color: var(--text-main);
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: var(--space-lg);
-    flex-wrap: wrap;
+    gap: 1.15rem;
+    flex-wrap: nowrap;
 }
 
 .main-nav a {
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
     color: var(--text-muted);
+    white-space: nowrap;
 }
 .main-nav a:hover, .main-nav a[aria-current="page"] {
     color: var(--primary);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-main);
+}
+.menu-toggle svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Profile Section */
@@ -260,10 +267,36 @@ a:hover, a:focus {
     display: block;
 }
 
-/* Section Spacing */
-section { margin-bottom: 8rem; }
+/* Section Spacing & Hierarchy */
+section { 
+    padding: var(--space-xl) 0;
+    position: relative;
+    z-index: 1; /* Ensure content stays above pseudo-element background */
+}
 /* Add top padding so sticky header doesn't cover section headings */
-section[id] { scroll-margin-top: 6rem; }
+section[id] { scroll-margin-top: 5rem; }
+
+.bg-default {
+    background-color: var(--bg-color);
+}
+
+.bg-alternate {
+    background-color: var(--surface);
+}
+
+.bg-alternate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: var(--surface);
+    z-index: -1;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
 
 .story-content {
     font-size: 1.1rem;
@@ -485,6 +518,54 @@ h3 {
     color: var(--bg-color);
 }
 
+.pub-status {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-main);
+    background: var(--surface);
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+    border: 1px solid var(--border);
+}
+
+/* Abstracts (Details/Summary) */
+.pub-abstract {
+    grid-column: 1 / -1;
+    margin-top: var(--space-md);
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+.pub-abstract summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--primary);
+    list-style: none;
+}
+.pub-abstract summary::-webkit-details-marker {
+    display: none;
+}
+.pub-abstract summary::before {
+    content: "►";
+    font-size: 0.8em;
+    margin-right: 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.pub-abstract[open] summary::before {
+    transform: rotate(90deg);
+}
+.pub-abstract p {
+    margin-top: var(--space-sm);
+    line-height: 1.6;
+}
+
 /* Research Interests sub-section */
 .research-interests {
     margin-bottom: var(--space-lg);
@@ -566,6 +647,30 @@ h3 {
 .social-links { display: flex; gap: var(--space-md); }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: var(--space-md) var(--space-lg);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        gap: var(--space-md);
+    }
+    .main-nav ul.is-open {
+        display: flex;
+    }
+}
+
 @media (max-width: 600px) {
     .profile-grid { grid-template-columns: 1fr; }
     .profile-image-container { max-width: 250px; margin: 0 auto; }
