@@ -55,4 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Expand all <details> (accordions, abstracts) before printing so the
+    // full content appears in the PDF, then restore the original state after.
+    window.addEventListener('beforeprint', () => {
+        document.querySelectorAll('details:not([open])').forEach(d => {
+            d.dataset.wasClosed = 'true';
+            d.open = true;
+        });
+    });
+
+    window.addEventListener('afterprint', () => {
+        document.querySelectorAll('details[data-was-closed="true"]').forEach(d => {
+            d.open = false;
+            delete d.dataset.wasClosed;
+        });
+    });
 });

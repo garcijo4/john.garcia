@@ -104,6 +104,23 @@ a:hover, a:focus {
     outline-offset: 4px;
 }
 
+/* Skip to main content link — visible only when focused */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border-radius: 0 0 var(--radius) 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+.skip-link:focus {
+    left: 0;
+}
+
 /* Layout */
 .container {
     max-width: var(--max-width);
@@ -571,6 +588,156 @@ h3 {
     margin-bottom: var(--space-lg);
 }
 
+/*
+========================================
+   Conference Presentations — collapsible
+   accordions grouped by year
+========================================
+*/
+.talks-intro {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin-bottom: var(--space-md);
+}
+
+.talks-accordion {
+    margin: var(--space-md) 0;
+}
+
+.year-group {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-sm);
+    background: var(--bg-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.year-group[open] {
+    border-color: rgba(76, 81, 191, 0.35);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.year-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    cursor: pointer;
+    padding: 0.85rem 1.1rem;
+    list-style: none;
+    user-select: none;
+    border-radius: var(--radius);
+    transition: background 0.2s ease;
+}
+
+.year-summary::-webkit-details-marker { display: none; }
+.year-summary:hover { background: var(--surface); }
+
+.year-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.year-label::before {
+    content: "\25B6";
+    font-family: var(--font-sans);
+    font-size: 0.65em;
+    color: var(--primary);
+    transition: transform 0.2s ease;
+}
+
+.year-group[open] .year-label::before {
+    transform: rotate(90deg);
+}
+
+.year-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.18em 0.7em;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.talk-list {
+    list-style: none;
+    padding: 0 1.1rem;
+    margin: 0;
+}
+
+.talk-item {
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.talk-title {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.talk-venue {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+.talk-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.45rem;
+}
+
+.talk-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.15em 0.6em;
+    border-radius: 4px;
+}
+
+.talk-tag.workshop {
+    color: var(--primary);
+    background: rgba(76, 81, 191, 0.08);
+    border: 1px solid rgba(76, 81, 191, 0.2);
+}
+
+.talk-tag.coauthor {
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.talk-tag.award {
+    color: #b45309;
+    background: rgba(217, 119, 6, 0.1);
+    border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.talk-tag.devel {
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
 /* 
 ========================================
    Award & Service Lists
@@ -687,4 +854,79 @@ h3 {
     .main-nav ul {
         gap: var(--space-md);
     }
+}
+
+/*
+========================================
+   Dark Mode (respects system preference)
+========================================
+*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0d1117;
+        --text-main: #e6edf3;
+        --text-muted: #9aa7b4;
+        --primary: #a5b4fc;       /* lighter indigo for contrast on dark */
+        --surface: #161b22;
+        --border: #2a313c;
+    }
+
+    .site-header {
+        background: rgba(13, 17, 23, 0.85);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-image { background-color: var(--surface); }
+
+    /* Skip link keeps dark text on the lighter primary fill */
+    .skip-link { color: #0d1117; }
+
+    /* Warm / cool / award tag text need lighter shades on dark backgrounds */
+    .tag-warm .tag { color: #fdba74; }
+    .tag-cool .tag { color: #5eead4; }
+    .talk-tag.award {
+        color: #fbbf24;
+        background: rgba(217, 119, 6, 0.18);
+        border-color: rgba(217, 119, 6, 0.4);
+    }
+}
+
+/* Dark-mode mobile nav dropdown background */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .main-nav ul {
+        background: rgba(13, 17, 23, 0.98);
+    }
+}
+
+/*
+========================================
+   Print styles — clean PDF / paper output
+========================================
+*/
+@media print {
+    html { scroll-behavior: auto; }
+    body { color: #000; background: #fff; font-size: 11pt; line-height: 1.4; }
+    a { color: #000; text-decoration: underline; }
+
+    /* Hide interactive chrome that doesn't belong on paper */
+    .site-header,
+    .menu-toggle,
+    .skip-link,
+    .news-section .button,
+    .site-footer .social-links { display: none !important; }
+
+    section { padding: 0.75rem 0 !important; }
+    section[id] { scroll-margin-top: 0; }
+    .container { max-width: 100%; padding: 0; }
+
+    .bg-alternate, .bg-default { background: #fff !important; }
+    .bg-alternate::before { display: none !important; }
+
+    h3 { page-break-after: avoid; }
+    .timeline-item, .pub-item, .talk-item, .card { page-break-inside: avoid; }
+
+    /* Reveal collapsed accordions / abstracts when printing */
+    details > *:not(summary) { display: block !important; }
+    .year-group, .pub-abstract { border-color: #ccc; }
+    .year-label::before, .pub-abstract summary::before { display: none; }
 }
