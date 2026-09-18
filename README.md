@@ -8,7 +8,8 @@ Built using semantic HTML5 and vanilla CSS.
 ## Project Files
 - `index.html`: The main landing page including the profile, bio, contact links, and a preview of selected research/projects.
 - `styles.css`: The shared stylesheet defining layout, typography, and color palettes.
-- `assets/`: Directory containing the profile picture (`profile.jpg`) and CV (`cv.pdf`).
+- `app.js`: Mobile navigation, active-section highlighting, and print handling.
+- `assets/`: Profile photo (`profile-600/1200.webp|jpg`, a portrait crop of `profile.jpg`), social preview image (`og-image.jpg`), CV (`John_Garcia_CV.pdf`), and favicon.
 - `README.md`: This file.
 
 ## How to Run Locally
@@ -17,14 +18,13 @@ You can double-click the file or drag it into an open browser window.
 
 ## Customization Guide
 
-### 1. Color Palettes
-The site design is controlled by CSS variables located at the top of `styles.css`.
-Currently, there are 3 proposed palettes:
-1. **Classic Slate & Indigo** (Active by default)
-2. **Modern Serif & Forest**
-3. **Crisp Monotone & Tech Blue**
+### 1. Colors and type
+The site uses a warm editorial theme: an off-white paper background, deep navy text, and a single rust accent. All colors are CSS variables at the top of `styles.css` (`:root`), with a dark-mode override further down (`@media (prefers-color-scheme: dark)`). Change the accent by editing `--primary`, `--primary-strong`, `--primary-soft`, and `--primary-ring` together.
 
-To switch palettes, simply comment out the active palette in `:root` and uncomment your preferred option.
+Headings use Merriweather; body text uses Inter (both loaded from Google Fonts in `index.html`).
+
+### Profile photo
+`assets/profile.jpg` is the full-resolution original (16 MB) and is not loaded by the page. The hero uses the optimized crops `profile-600.*` and `profile-1200.*`; regenerate them from the original if you change the photo.
 
 ### 2. Updating Content
 Open `index.html` in a text editor to update the placeholder values:
@@ -41,4 +41,4 @@ If you choose a multi-page site map (e.g., adding a `research.html` page):
 
 ## Common Issues
 - **CSS not loading:** Ensure `styles.css` is in the same directory as `index.html` and that your browser hasn't cached an old version (try Hard Refresh: Ctrl+F5 or Cmd+Shift+R).
-- **Images/PDFs broken:** Ensure files are correctly named and located inside the `assets/` folder (`assets/profile.jpg`, `assets/cv.pdf`).
+- **Images/PDFs broken:** Ensure files are correctly named and located inside the `assets/` folder (`assets/profile-600.jpg`, `assets/John_Garcia_CV.pdf`).

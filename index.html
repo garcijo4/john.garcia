@@ -15,14 +15,16 @@
     <meta property="og:site_name" content="John Garcia">
     <meta property="og:title" content="John Garcia — Finance &amp; Analytics | Cal Lutheran">
     <meta property="og:description" content="From immigrant field worker roots to finance researcher — bridging industry and academia.">
-    <meta property="og:image" content="https://garcijo4.github.io/john.garcia/assets/profile.jpg">
+    <meta property="og:image" content="https://garcijo4.github.io/john.garcia/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://garcijo4.github.io/john.garcia/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="John Garcia — Finance &amp; Analytics | Cal Lutheran">
     <meta name="twitter:description" content="From immigrant field worker roots to finance researcher — bridging industry and academia.">
-    <meta name="twitter:image" content="https://garcijo4.github.io/john.garcia/assets/profile.jpg">
+    <meta name="twitter:image" content="https://garcijo4.github.io/john.garcia/assets/og-image.jpg">
     
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -33,6 +35,7 @@
       "@type": "Person",
       "name": "John Garcia",
       "jobTitle": "Associate Professor of Finance & Analytics",
+      "image": "https://garcijo4.github.io/john.garcia/assets/profile-600.jpg",
       "affiliation": {
         "@type": "Organization",
         "name": "California Lutheran University"
@@ -64,10 +67,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=8df10de93b">
 </head>
 
 <body>
@@ -78,13 +81,13 @@
     <header class="site-header">
         <div class="container header-inner">
             <h1 class="site-title"><a href="index.html">John Garcia</a></h1>
-            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="navigation-links" aria-label="Open navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
             <nav class="main-nav" aria-label="Main Navigation">
-                <ul>
+                <ul id="navigation-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#news">Updates</a></li>
                     <li><a href="#story">My Story</a></li>
@@ -105,34 +108,40 @@
         <section id="about" class="profile-section container">
             <div class="profile-grid">
                 <div class="profile-image-container">
-                    <img src="assets/profile.jpg" alt="Profile picture of John Garcia" class="profile-image">
+                    <picture>
+                        <source type="image/webp" srcset="assets/profile-600.webp 600w, assets/profile-1200.webp 1200w" sizes="(max-width: 720px) 240px, 300px">
+                        <img src="assets/profile-600.jpg" srcset="assets/profile-600.jpg 600w, assets/profile-1200.jpg 1200w" sizes="(max-width: 720px) 240px, 300px"
+                            width="600" height="750" alt="John Garcia in his office, holding an “I love my job” mug" class="profile-image" fetchpriority="high" decoding="async">
+                    </picture>
                 </div>
                 <div class="profile-content">
+                    <p class="title">Associate Professor of Finance &amp; Analytics<span class="affiliation"><a href="https://www.callutheran.edu/" target="_blank" rel="noopener noreferrer">California Lutheran University</a></span></p>
                     <h2 class="name">John Garcia</h2>
-                    <p class="title">Associate Professor of Finance &amp; Analytics<br><a href="https://www.callutheran.edu/" target="_blank" rel="noopener noreferrer">California Lutheran University</a></p>
 
                     <div class="bio">
-                        <p class="tagline" style="margin-bottom: 0.75rem;">From immigrant field worker roots to finance researcher — bridging industry
+                        <p class="tagline">From immigrant field worker roots to finance researcher — bridging industry
                             and academia.</p>
-                        <p class="cta-text" style="margin-bottom: var(--space-lg); font-weight: 500; color: var(--text-main);">Available for speaking, collaboration, and workshops on finance, analytics, and AI in education.</p>
+                        <p class="cta-text">Available for speaking, collaboration, and workshops on finance, analytics, and AI in education.</p>
                     </div>
 
-                    <div class="contact-links">
-                        <a href="mailto:jgarcia@callutheran.edu" class="button button-outline">Email Me</a>
+                    <div class="hero-actions">
+                        <a href="#research" class="button">Explore Research <span aria-hidden="true">&rarr;</span></a>
+                        <a href="assets/John_Garcia_CV.pdf" class="button button-outline" target="_blank" rel="noopener noreferrer">Download CV</a>
+                    </div>
+                    <div class="contact-links profile-links">
+                        <a href="mailto:jgarcia@callutheran.edu" class="profile-link">Email Me</a>
                         <a href="https://www.callutheran.edu/faculty/profile.html?id=jgarcia"
-                            class="button button-outline" target="_blank" rel="noopener noreferrer">University
+                            class="profile-link" target="_blank" rel="noopener noreferrer">University
                             Profile</a>
-                        <a href="assets/John_Garcia_CV.pdf" class="button button-outline" target="_blank"
-                            rel="noopener noreferrer">Download CV</a>
-                        <a href="https://www.linkedin.com/in/johngarcia4/" class="button button-outline button-icon" target="_blank"
+                        <a href="https://www.linkedin.com/in/johngarcia4/" class="profile-link" target="_blank"
                             rel="noopener noreferrer" title="LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                            <span style="margin-left: 0.4rem;">LinkedIn</span>
+                            <span>LinkedIn</span>
                         </a>
-                        <a href="https://orcid.org/0000-0002-7062-0032" class="button button-outline button-icon" target="_blank"
+                        <a href="https://orcid.org/0000-0002-7062-0032" class="profile-link" target="_blank"
                             rel="noopener noreferrer" title="ORCID">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.856 5.016h-3.388V7.416zm1.444 1.303v7.44h1.975c3.228 0 4.144-2.19 4.144-3.725 0-1.556-1.053-3.715-4.04-3.715h-2.08z"/></svg>
-                            <span style="margin-left: 0.4rem;">ORCID</span>
+                            <span>ORCID</span>
                         </a>
                     </div>
                 </div>
@@ -141,30 +150,55 @@
 
         <!-- Recent News Section -->
         <section id="news" class="news-section bg-alternate container">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+            <div class="section-header">
                 <h3>Recent Updates</h3>
-                <a href="#research" class="button button-outline" style="font-size: 0.9em; padding: 0.4rem 0.8rem; border-color: var(--border);">Explore Research &rarr;</a>
             </div>
             <ul class="timeline-list">
+                <li class="timeline-item">
+                    <span class="timeline-year">August 2026</span>
+                    <div class="timeline-content">
+                        <strong>Preprint Published on SSRN</strong>
+                        <span class="timeline-org">SSRN</span>
+                        <p class="timeline-detail">Published the preprint &ldquo;Which Number Is Sticky? Numerical Anchoring After Evidence Withdrawal in LLM Financial Analysis&rdquo; on SSRN.</p>
+                        <div class="timeline-links">
+                            <a href="https://papers.ssrn.com/abstract=7411618" class="badge" target="_blank" rel="noopener noreferrer">Read on SSRN</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">August 2026</span>
+                    <div class="timeline-content">
+                        <strong>Developed College Success Companion App</strong>
+                        <span class="timeline-org">First Year Seminar, California Lutheran University</span>
+                        <p class="timeline-detail">Developed College Success Companion for my first-year seminar students, subsequently adopted by all First Year Seminar faculty to enhance the first-year learning experience. The app pairs concise chapter summaries with flashcards, reflection activities, and a study chatbot to help students build skills in time management, studying, financial literacy, wellness, and career planning.</p>
+                        <div class="timeline-links">
+                            <a href="https://clu-college-success.vercel.app/" class="badge" target="_blank" rel="noopener noreferrer">Explore the App</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="timeline-item">
                     <span class="timeline-year">July 2026</span>
                     <div class="timeline-content">
                         <strong>Paper Published</strong>
                         <span class="timeline-org">Journal of Behavioral and Experimental Finance</span>
                         <p class="timeline-detail">"The Attention Economy of Retail Trading: Evidence from Robinhood and Social Media" was published, exploring how fintech platforms act as behavioral infrastructure that drives attention-induced retail trading.</p>
-                        <div style="margin-top: 0.6rem;">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S2214635026000778?via%3Dihub" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Read Paper</a>
+                        <div class="timeline-links">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2214635026000778?via%3Dihub" class="badge" target="_blank" rel="noopener noreferrer">Read Paper</a>
                         </div>
                     </div>
                 </li>
+            </ul>
+            <details class="content-disclosure news-archive">
+                <summary>Earlier updates <span class="disclosure-count">8 updates</span></summary>
+                <ul class="timeline-list">
                 <li class="timeline-item">
                     <span class="timeline-year">June 2026</span>
                     <div class="timeline-content">
                         <strong>Launched Free Faculty Development Course</strong>
                         <span class="timeline-org">Teaching with Artificial Intelligence</span>
                         <p class="timeline-detail">Created and released a free, self-paced faculty development course on teaching with AI &mdash; helping instructors build a teaching-ready portfolio and make defensible choices about AI in their courses.</p>
-                        <div style="margin-top: 0.6rem;">
-                            <a href="https://www.teachingwithai.app/" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">View Course</a>
+                        <div class="timeline-links">
+                            <a href="https://www.teachingwithai.app/" class="badge" target="_blank" rel="noopener noreferrer">View Course</a>
                         </div>
                     </div>
                 </li>
@@ -174,8 +208,8 @@
                         <strong>Conference Presentation</strong>
                         <span class="timeline-org">Research Symposium on Finance and Economics (RSFE), Krea University, Sri City, India (Virtual)</span>
                         <p class="timeline-detail">Presented "Algorithmic Anchoring: How Prompt-Embedded Reference Points Bias LLM Financial Estimates."</p>
-                        <div style="margin-top: 0.6rem;">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Working Paper (SSRN)</a>
+                        <div class="timeline-links">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="badge" target="_blank" rel="noopener noreferrer">Working Paper (SSRN)</a>
                         </div>
                     </div>
                 </li>
@@ -193,8 +227,8 @@
                         <strong>Developed Faculty Mentor Training Program</strong>
                         <span class="timeline-org">School of Management, California Lutheran University</span>
                         <p class="timeline-detail">Designed and authored <em>Business Pathways: Guiding Students from First Year to Launch</em>, a 6-hour, self-paced faculty mentor training program (6 modules, 24 video lessons) built on the CIMER Entering Mentoring framework. Adopted by the School of Management for faculty training and currently being adapted for deployment across the College of Arts and Sciences.</p>
-                        <div style="margin-top: 0.6rem;">
-                            <a href="https://drive.google.com/drive/folders/10Ehii7tlFJ6uGQgjfDnoJSOk29q31qtd?usp=sharing" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Open-Source Materials</a>
+                        <div class="timeline-links">
+                            <a href="https://drive.google.com/drive/folders/10Ehii7tlFJ6uGQgjfDnoJSOk29q31qtd?usp=sharing" class="badge" target="_blank" rel="noopener noreferrer">Open-Source Materials</a>
                         </div>
                     </div>
                 </li>
@@ -204,10 +238,10 @@
                         <strong>Session Lead &amp; Paper Presentations</strong>
                         <span class="timeline-org">Southwestern Finance Association (SWFA) Annual Meeting, Dallas, TX</span>
                         <p class="timeline-detail">Took a lead role in delivering a session on integrating artificial intelligence into finance education and presented two working papers.</p>
-                        <div style="margin-top: 0.6rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <a href="https://garcijo4.github.io/ai_in_finance_classroom/" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Session Resources</a>
-                            <a href="https://papers.ssrn.com/abstract=5901742" class="badge" style="background-color: var(--text-muted); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">LLM Agents (SSRN)</a>
-                            <a href="https://papers.ssrn.com/abstract=5764593" class="badge" style="background-color: var(--text-muted); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Retail Trading (SSRN)</a>
+                        <div class="timeline-links">
+                            <a href="https://garcijo4.github.io/ai_in_finance_classroom/" class="badge" target="_blank" rel="noopener noreferrer">Session Resources</a>
+                            <a href="https://papers.ssrn.com/abstract=5901742" class="badge" target="_blank" rel="noopener noreferrer">LLM Agents (SSRN)</a>
+                            <a href="https://papers.ssrn.com/abstract=5764593" class="badge" target="_blank" rel="noopener noreferrer">Retail Trading (SSRN)</a>
                         </div>
                     </div>
                 </li>
@@ -217,8 +251,8 @@
                         <strong>Working Paper Published</strong>
                         <span class="timeline-org">SSRN</span>
                         <p class="timeline-detail">"Algorithmic Anchoring: How Prompt-Embedded Reference Points Bias LLM Financial Estimates"</p>
-                        <div style="margin-top: 0.6rem;">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Read on SSRN</a>
+                        <div class="timeline-links">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="badge" target="_blank" rel="noopener noreferrer">Read on SSRN</a>
                         </div>
                     </div>
                 </li>
@@ -228,9 +262,9 @@
                         <strong>Workshop Presentation</strong>
                         <span class="timeline-org">National Science Foundation Regional AI Workshop, Los Angeles</span>
                         <p class="timeline-detail">Presented "Too Smart to be Human: Can AI Agents Replace us in Behavioral Experiments?"</p>
-                        <div style="margin-top: 0.6rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <a href="https://www.youtube.com/watch?v=X-3_0X6_3lo" class="badge" style="background-color: var(--primary); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Watch Video</a>
-                            <a href="https://events.isi.edu/socalai-2026/socal-ai26-lt1-garcia-smart-human.pdf" class="badge" style="background-color: var(--text-muted); text-decoration: none; padding: 0.35em 0.75em;" target="_blank">Download Slides</a>
+                        <div class="timeline-links">
+                            <a href="https://www.youtube.com/watch?v=X-3_0X6_3lo" class="badge" target="_blank" rel="noopener noreferrer">Watch Video</a>
+                            <a href="https://events.isi.edu/socalai-2026/socal-ai26-lt1-garcia-smart-human.pdf" class="badge" target="_blank" rel="noopener noreferrer">Download Slides</a>
                         </div>
                     </div>
                 </li>
@@ -242,14 +276,17 @@
                         <p class="timeline-detail">"A Stabilizing Force? How Religiosity Moderates the Effect of Sentiment on Stock Liquidity" accepted for publication.</p>
                     </div>
                 </li>
-            </ul>
+                </ul>
+            </details>
         </section>
 
         <!-- My Story Section -->
         <section id="story" class="story-section bg-default container">
             <h3>My Story</h3>
             <div class="story-content">
-                <p>My story begins in a family shaped by sacrifice, hard work, and the belief that education could open doors. I was born in Los Angeles to immigrant parents and grew up between California and Mexico, becoming the first in my family to graduate from high school and college. Those roots still shape how I see the world. Before entering academia, I spent more than two decades in finance and analytics leadership roles at Ernst &amp; Young and Toyota, where I learned how data, strategy, and judgment drive real decisions. But at a certain point, I felt called to build something different with the second half of my career. I earned a doctorate and moved into higher education because I wanted to invest in people, not just performance. Today, as a finance and analytics professor, my work brings together research, teaching, and real-world experience in behavioral finance, machine learning, and AI. At the center of all of it is a simple idea: where you start should never define where you can go.</p>
+                <p>My story begins in a family shaped by sacrifice, hard work, and the belief that education could open doors. I was born in Los Angeles to immigrant parents and grew up between California and Mexico, becoming the first in my family to graduate from high school and college. Those roots still shape how I see the world. </p>
+                <p>Before entering academia, I spent more than two decades in finance and analytics leadership roles at Ernst &amp; Young and Toyota, where I learned how data, strategy, and judgment drive real decisions. But at a certain point, I felt called to build something different with the second half of my career. I earned a doctorate and moved into higher education because I wanted to invest in people, not just performance. </p>
+                <p>Today, as a finance and analytics professor, my work brings together research, teaching, and real-world experience in behavioral finance, machine learning, and AI. At the center of all of it is a simple idea: where you start should never define where you can go.</p>
             </div>
         </section>
 
@@ -338,77 +375,96 @@
         <section id="teaching" class="teaching-section bg-alternate container">
             <h3>Teaching</h3>
             <div class="teaching-content">
-                <p style="margin-bottom: 2rem;">I teach across undergraduate, MBA, and EMBA levels, integrating behavioral finance, machine learning, and generative AI into a practitioner-informed, technology-enhanced curriculum. Since joining Cal Lutheran in Fall 2021, I have earned an average instructor rating of <strong>4.72 / 5.0</strong> (median 4.80). I have developed eight new courses and co-created CLU's first undergraduate Data Science program (launched Fall 2024). Course-specific AI tutors I developed are accessed over 1,000 times monthly by students across my courses.</p>
+                <p class="section-lede">I teach across undergraduate, MBA, and EMBA levels, integrating behavioral finance, machine learning, and generative AI into a practitioner-informed, technology-enhanced curriculum. Since joining Cal Lutheran in Fall 2021, I have earned an average instructor rating of <strong>4.72 / 5.0</strong> (median 4.80). I have developed eight new courses and co-created CLU's first undergraduate Data Science program (launched Fall 2024). Course-specific AI tutors I developed are accessed over 1,000 times monthly by students across my courses.</p>
                 
+                <details class="content-disclosure course-catalog">
+                    <summary>Explore the courses I teach <span class="disclosure-count">11 courses</span></summary>
                 <div class="card-grid">
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">EMBA</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">EMBA 502 &middot; Strategic Decision Making for High Performance &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Single continuous case (RegalTel churn crisis) runs all 8 weeks through a full descriptive &rarr; predictive &rarr; prescriptive pipeline (Tableau, JMP Pro, board capstone); builds executives as analytics consumers, not practitioners.</p>
+                        <div class="card-meta"><span class="course-level">EMBA</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">EMBA 502</span>
+                        <h4 class="course-title">Strategic Decision Making for High Performance</h4>
+                        <p>Single continuous case (RegalTel churn crisis) runs all 8 weeks through a full descriptive &rarr; predictive &rarr; prescriptive pipeline (Tableau, JMP Pro, board capstone); builds executives as analytics consumers, not practitioners.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">ECON 562 / MBA 580 &middot; Advanced Analytics &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">The most technically demanding course I teach &mdash; covering neural networks, ensemble methods, and model deployment &mdash; yet consistently earns 5.0 / 5.0 instructor ratings.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">ECON 562 / MBA 580</span>
+                        <h4 class="course-title">Advanced Analytics</h4>
+                        <p>The most technically demanding course I teach &mdash; covering neural networks, ensemble methods, and model deployment &mdash; yet consistently earns 5.0 / 5.0 instructor ratings.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">MBA 526 &middot; Foundations of Analytics &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Students replicate analysis from my published research (PCA in Applied Finance Letters), bridging academic rigor with live business data using JMP Pro.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA 526</span>
+                        <h4 class="course-title">Foundations of Analytics</h4>
+                        <p>Students replicate analysis from my published research (PCA in Applied Finance Letters), bridging academic rigor with live business data using JMP Pro.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">MBA 541 &middot; Strategic Financial Analysis</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Connects advanced valuation and financial modeling to strategic decision-making; draws directly on industry experience from Toyota and Ernst &amp; Young.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span></div>
+                        <span class="course-code">MBA 541</span>
+                        <h4 class="course-title">Strategic Financial Analysis</h4>
+                        <p>Connects advanced valuation and financial modeling to strategic decision-making; draws directly on industry experience from Toyota and Ernst &amp; Young.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">MBA 521 &middot; Corporate Finance</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Grounds corporate finance theory in real-world capital markets, with emphasis on analytical frameworks for complex organizational decisions.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span></div>
+                        <span class="course-code">MBA 521</span>
+                        <h4 class="course-title">Corporate Finance</h4>
+                        <p>Grounds corporate finance theory in real-world capital markets, with emphasis on analytical frameworks for complex organizational decisions.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">MBA 503 &middot; Foundations of Business Statistics &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Features AI-generated podcast-style chapter reviews and avatar-delivered intro lectures to extend learning beyond the classroom for working professionals.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA 503</span>
+                        <h4 class="course-title">Foundations of Business Statistics</h4>
+                        <p>Features AI-generated podcast-style chapter reviews and avatar-delivered intro lectures to extend learning beyond the classroom for working professionals.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Graduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">MBA5STI &middot; Innovations in FinTech &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">One of the first FinTech courses in the region; integrates blockchain, robo-advising, and AI in financial services with guest practitioners.</p>
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA5STI</span>
+                        <h4 class="course-title">Innovations in FinTech</h4>
+                        <p>One of the first FinTech courses in the region; integrates blockchain, robo-advising, and AI in financial services with guest practitioners.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Undergraduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">BUS 391 &middot; Principles of Finance</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Consistently maintains a waitlist; AI Finance Tutor handles 600+ student queries per month, and multimodal resources include Excel toolkits, AI-generated podcasts, and recorded lectures.</p>
+                        <div class="card-meta"><span class="course-level">Undergraduate</span></div>
+                        <span class="course-code">BUS 391</span>
+                        <h4 class="course-title">Principles of Finance</h4>
+                        <p>Consistently maintains a waitlist; AI Finance Tutor handles 600+ student queries per month, and multimodal resources include Excel toolkits, AI-generated podcasts, and recorded lectures.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Undergraduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">BUS 356 &middot; Business Analytics II &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Advances students into predictive modeling (regression through neural networks) using R and Python; paired with a course-specific AI tutor that students rate more helpful than the textbook.</p>
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">BUS 356</span>
+                        <h4 class="course-title">Business Analytics II</h4>
+                        <p>Advances students into predictive modeling (regression through neural networks) using R and Python; paired with a course-specific AI tutor that students rate more helpful than the textbook.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Undergraduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">BUS 256 &middot; Business Analytics I &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Gateway analytics course now required for all business majors; builds the statistical mindset and data fluency that BUS 356 builds upon.</p>
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">BUS 256</span>
+                        <h4 class="course-title">Business Analytics I</h4>
+                        <p>Gateway analytics course now required for all business majors; builds the statistical mindset and data fluency that BUS 356 builds upon.</p>
                     </div>
                     <div class="card">
-                        <strong style="display:block; color: var(--primary); font-size: 0.85rem; text-transform: uppercase;">Undergraduate</strong>
-                        <h4 style="margin: 0.3rem 0; font-size: 1.1rem;">UNIV-3ST &middot; Generative AI Literacy &#9733;</h4>
-                        <p style="margin:0; font-size: 0.95rem;">Cross-disciplinary course &mdash; one of the first at Cal Lutheran &mdash; equipping students to use, evaluate, and critically assess AI tools in academic and professional contexts.</p>
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">UNIV-3ST</span>
+                        <h4 class="course-title">Generative AI Literacy</h4>
+                        <p>Cross-disciplinary course &mdash; one of the first at Cal Lutheran &mdash; equipping students to use, evaluate, and critically assess AI tools in academic and professional contexts.</p>
                     </div>
                 </div>
                 
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem;">&#9733; Course developed or significantly redesigned by John Garcia</p>
+                <p class="card-note"><span class="course-flag">Developed</span> marks a course developed or significantly redesigned by John Garcia.</p>
+                </details>
             </div>
         </section>
 
         <!-- Research & Publications Section -->
         <section id="research" class="research-section bg-default container">
             <h3>Research &amp; Publications</h3>
+            <nav class="section-nav" aria-label="Research sections">
+                <a href="#working-papers">Working papers</a>
+                <a href="#journal-articles">Journal articles</a>
+                <a href="#conference-presentations">Presentations</a>
+            </nav>
 
             <!-- Research Overview -->
-            <div class="research-overview" style="margin-bottom: 4rem;">
-                <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem;">
+            <div class="research-overview">
+                <p class="section-lede">
                     My research examines how alternative information &mdash; social media sentiment, employee reviews,
                     and crowdsourced signals &mdash; shapes financial market behavior, and how machine learning can
                     extract actionable insight from this data. An emerging third stream uses large language model
@@ -419,9 +475,9 @@
 
                 <h4 class="subsection-heading">Research Streams</h4>
                 
-                <div class="stream" style="margin-bottom: 2rem;">
-                    <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-main);">Stream 1 &mdash; Alternative Data &amp; Financial Markets</h5>
-                    <p style="margin: 0; font-size: 0.95rem;">
+                <div class="stream">
+                    <h5 class="stream-title">Stream 1 &mdash; Alternative Data &amp; Financial Markets</h5>
+                    <p>
                         How do non-traditional signals &mdash; Twitter sentiment, Glassdoor reviews, crowdsourced earnings
                         forecasts &mdash; predict liquidity, financial distress, and investor behavior before conventional
                         indicators do? This stream establishes that "soft" information carries hard economic value,
@@ -430,9 +486,9 @@
                     </p>
                 </div>
 
-                <div class="stream" style="margin-bottom: 2rem;">
-                    <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-main);">Stream 2 &mdash; Computational Methods for Finance</h5>
-                    <p style="margin: 0; font-size: 0.95rem;">
+                <div class="stream">
+                    <h5 class="stream-title">Stream 2 &mdash; Computational Methods for Finance</h5>
+                    <p>
                         Developing machine learning and NLP tools to extract insight from high-dimensional financial
                         data. Key contributions include a PCA-based valuation uncertainty index that outperforms
                         eleven traditional proxies and novel synthetic sampling techniques for imbalanced bankruptcy
@@ -440,9 +496,9 @@
                     </p>
                 </div>
 
-                <div class="stream" style="margin-bottom: 3rem;">
-                    <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-main);">Stream 3 &mdash; LLM Agents &amp; Experimental Finance <em style="font-weight: normal; color: var(--text-muted);">(emerging)</em></h5>
-                    <p style="margin: 0; font-size: 0.95rem;">
+                <div class="stream">
+                    <h5 class="stream-title">Stream 3 &mdash; LLM Agents &amp; Experimental Finance <span class="stream-note">Emerging</span></h5>
+                    <p>
                         Using large language model agents &mdash; calibrated to empirical distributions from federal consumer
                         finance surveys &mdash; as synthetic market participants in controlled behavioral experiments. This
                         program tests whether AI agents reproduce documented anomalies (herding, momentum,
@@ -462,29 +518,64 @@
             </div>
 
             <!-- Current Projects & Working Papers -->
-            <h4 class="subsection-heading">Current Projects &amp; Working Papers</h4>
-            <ol class="publication-list">
+            <h4 id="working-papers" class="subsection-heading">Current Projects &amp; Working Papers</h4>
+            <ol class="publication-list working-papers">
                 <li class="pub-item">
-                    <span class="pub-year">2026</span>
+                    <span class="pub-year">Revise &amp; Resubmit</span>
                     <div class="pub-content">
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" class="pub-doi"
-                            target="_blank" rel="noopener noreferrer">SSRN</a> <strong>&ldquo;Algorithmic Anchoring: How
-                            Prompt-Embedded Reference Points Bias LLM Financial Estimates&rdquo;</strong>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5901742" class="pub-doi"
+                            target="_blank" rel="noopener noreferrer">SSRN</a>
+                        <strong>&ldquo;Homo Silicus is Hyper-Rational &mdash; Why LLM Agents Fail to Replicate Attention-Driven Trading&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J.</span>
+                        <span class="pub-journal"><em>Journal of Economic Interaction and Coordination</em></span>
                     </div>
                 </li>
                 <li class="pub-item">
-                    <span class="pub-year">2025</span>
+                    <span class="pub-year">Under Review</span>
                     <div class="pub-content">
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5901742" class="pub-doi"
-                            target="_blank" rel="noopener noreferrer">SSRN</a> <strong>&ldquo;Homo Silicus is
-                            Hyper-Rational: Why LLM Agents Fail to Replicate Attention-Driven Trading&rdquo;</strong>
-                        <span class="pub-status">Presented at SWFA 2026</span>
+                        <a href="https://papers.ssrn.com/abstract=6366838" class="pub-doi"
+                            target="_blank" rel="noopener noreferrer">SSRN</a>
+                        <strong>&ldquo;Algorithmic Anchoring: How Prompt-Embedded Reference Points Bias LLM Financial Estimates&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J.</span>
+                        <span class="pub-journal"><em>Journal of Computational Social Science</em></span>
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-year">Under Review</span>
+                    <div class="pub-content">
+                        <strong>&ldquo;Investor Attention and the Variance Risk Premium: Predictive Content from Search, News, and Social Media&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J., Bulut, L.</span>
+                        <span class="pub-journal"><em>Quarterly Review of Economics and Finance</em></span>
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-year">Under Review</span>
+                    <div class="pub-content">
+                        <strong>&ldquo;Same Benchmark, Different Leverage: Robinhood Holder Additions after Benchmark Gains and Declines&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J.</span>
+                        <span class="pub-journal"><em>International Journal of Financial Studies</em></span>
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-year">Working Paper</span>
+                    <div class="pub-content">
+                        <a href="https://papers.ssrn.com/abstract=7411618" class="pub-doi"
+                            target="_blank" rel="noopener noreferrer">SSRN</a>
+                        <strong>&ldquo;Which Number Is Sticky? Numerical Anchoring After Evidence Withdrawal in LLM Financial Analysis&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J.</span>
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <span class="pub-year">Working Paper</span>
+                    <div class="pub-content">
+                        <strong>&ldquo;Are Aliases Neutral? Company Names and LLM Equity Valuation&rdquo;</strong>
+                        <span class="pub-authors">Garcia, J.</span>
                     </div>
                 </li>
             </ol>
 
             <!-- Publications list -->
-            <h4 class="subsection-heading" style="margin-top: 3.5rem;">Peer-Reviewed Journal Articles</h4>
+            <h4 id="journal-articles" class="subsection-heading spaced">Peer-Reviewed Journal Articles</h4>
             <ol class="publication-list">
                 <li class="pub-item">
                     <span class="pub-year">2026</span>
@@ -610,7 +701,7 @@
             </ol>
 
             <!-- Conference Presentations -->
-            <h4 class="subsection-heading" style="margin-top: 3.5rem;">Conference Presentations</h4>
+            <h4 id="conference-presentations" class="subsection-heading spaced">Conference Presentations</h4>
             <p class="talks-intro">33 presentations at regional, national, and international finance and analytics conferences since 2019. Click a year to expand.</p>
 
             <div class="talks-accordion">
@@ -908,10 +999,10 @@
             <div class="consulting-content">
                 <p>I selectively take on consulting engagements where my research and industry background can deliver measurable impact. My work sits at the intersection of advanced analytics, behavioral science, and strategic decision-making &mdash; the same space that drives my academic research and that I navigated for two decades in industry.</p>
                 
-                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem;">What I bring to engagements:</h5>
+                <h5 class="consulting-subhead">What I bring to engagements</h5>
                 <p>My consulting is grounded in 20+ years of executive and professional experience at Ernst &amp; Young and Toyota North America, a doctorate in finance and analytics, active peer-reviewed research in behavioral finance and AI, and hands-on fluency with the full analytics stack &mdash; from experimental design and survey methodology through machine learning, large-scale LLM engineering, and deployed simulation tools. I hold the Certified Analytics Professional (CAP) designation and am a CPA, giving me the rare ability to move fluidly between rigorous quantitative analysis and the business and financial context that makes it actionable.</p>
                 
-                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem;">Areas where I've delivered results:</h5>
+                <h5 class="consulting-subhead">Areas where I've delivered results</h5>
                 <ul class="styled-list">
                     <li><strong>Voter &amp; market segmentation</strong> &mdash; Clustering, persuadability modeling, and message-response experimentation using advanced statistical methods (K-medoids, PCA, gradient-boosted trees) and LLM-based voter simulation agents calibrated against real survey data</li>
                     <li><strong>Behavioral analytics</strong> &mdash; Applying sentiment analysis, attention modeling, anchoring research, and experimental economics to real-world decision problems in both financial markets and public policy</li>
@@ -920,12 +1011,12 @@
                     <li><strong>LLM experimentation &amp; agent design</strong> &mdash; Designing and running large-scale LLM experiments, building theory-grounded AI agent architectures, and deploying production-ready simulation tools for ongoing client use</li>
                 </ul>
                 
-                <h5 style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.1rem;">How I work:</h5>
+                <h5 class="consulting-subhead">How I work</h5>
                 <p>I engage on a project basis with clearly scoped deliverables, transparent pricing, and a bias toward work that generates lasting strategic assets, not just reports that sit on a shelf. I'm equally comfortable as the sole analyst on a focused research study or as a senior advisor embedded within a larger team. Recent engagements have included statewide voter segmentation and message-response modeling for political strategy, AI-in-education advisory for university programs, and experimental design for behavioral finance research.</p>
                 
                 <p>I bring an academic's rigor and a practitioner's pragmatism. If you have a problem that lives at the intersection of data, behavior, and strategy, I'd welcome a conversation.</p>
                 
-                <div class="contact-links" style="margin-top: 1.5rem;">
+                <div class="contact-links consulting-actions">
                     <a href="mailto:jgarcia@callutheran.edu" class="button button-outline">Email Me</a>
                     <a href="https://www.linkedin.com/in/johngarcia4/" class="button button-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
@@ -1207,7 +1298,7 @@
             <!-- Technical Skills -->
             <h4 class="subsection-heading">Technical Skills</h4>
             
-            <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem;">Statistical &amp; ML</h5>
+            <h5 class="skill-group-title">Statistical &amp; ML</h5>
             <ul class="tag-list">
                 <li class="tag">R</li>
                 <li class="tag">Python</li>
@@ -1217,14 +1308,14 @@
                 <li class="tag">JMP</li>
             </ul>
 
-            <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem;">Data &amp; Visualization</h5>
-            <ul class="tag-list" style="margin-bottom: 0.5rem;">
+            <h5 class="skill-group-title">Data &amp; Visualization</h5>
+            <ul class="tag-list">
                 <li class="tag">SQL</li>
                 <li class="tag">SAS</li>
                 <li class="tag">Tableau</li>
             </ul>
             
-            <h5 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1rem;">LLM &amp; AI</h5>
+            <h5 class="skill-group-title">LLM &amp; AI</h5>
             <ul class="tag-list">
                 <li class="tag">OpenAI API</li>
                 <li class="tag">Anthropic API</li>
@@ -1279,6 +1370,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <p>&copy; 2026 John Garcia</p>
+            <a href="#about" class="back-to-top">Back to top &uarr;</a>
             <div class="social-links">
                 <a href="https://www.callutheran.edu/faculty/profile.html?id=jgarcia" target="_blank"
                     rel="noopener noreferrer">University Profile</a>
@@ -1290,7 +1382,7 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=69e6a5ef38"></script>
 </body>
 
 </html>
