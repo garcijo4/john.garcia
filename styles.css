@@ -413,6 +413,9 @@ h3 + .subsection-heading, .section-lede + .subsection-heading { margin-top: 0.5r
 .pub-journal { grid-area: journal; display: block; font-size: 0.9rem; color: var(--text-muted); }
 .working-papers .pub-content { grid-template-areas: "title badge" "authors badge" "journal badge"; }
 .pub-authors { grid-area: authors; font-size: 0.88rem; color: var(--text-muted); }
+.pub-summary { grid-area: journal; margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-muted); max-width: var(--measure); }
+.pub-links { grid-area: badge; display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+.pub-links .pub-doi { margin-top: 0; }
 
 /* Working-paper status pill in the left column */
 .working-papers .pub-year {
