@@ -380,6 +380,33 @@ h3 + .subsection-heading, .section-lede + .subsection-heading { margin-top: 0.5r
 
 .skill-group-title { font-size: 0.92rem; font-weight: 600; color: var(--text-main); margin: 1.1rem 0 0.5rem; }
 .language-note { margin-top: 1.5rem; color: var(--text-muted); font-style: italic; }
+.credential-note { margin-top: 1rem; color: var(--text-muted); font-size: 0.88rem; }
+
+/* Teaching highlights and a small, permanent resource collection */
+.teaching-highlights {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem; margin: 0 0 0.8rem; padding: 1.35rem 0;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.teaching-highlights > div + div { border-left: 1px solid var(--border); padding-left: 1.25rem; }
+.teaching-highlights dt {
+    font-family: var(--font-serif); font-size: clamp(1.4rem, 3vw, 2rem);
+    line-height: 1.3; color: var(--primary-strong); white-space: nowrap;
+}
+.teaching-highlights dd { margin-top: 0.4rem; font-size: 0.84rem; color: var(--text-muted); }
+.teaching-impact { font-size: 0.88rem; color: var(--text-muted); max-width: var(--measure); margin-bottom: 2.25rem; }
+.subsection-heading[id] { scroll-margin-top: 6rem; }
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 2.5rem; margin-bottom: 2rem; }
+.resource-item { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; border-top: 1px solid var(--border); padding-top: 1rem; }
+.resource-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--primary); margin-bottom: 0.35rem; }
+.resource-item h5 { font-family: var(--font-serif); font-size: 1.08rem; line-height: 1.45; margin-bottom: 0.45rem; }
+.resource-item > p:not(.resource-label) { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.55rem; }
+.resource-item a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; font-size: 0.86rem; font-weight: 500; }
+.resource-item > a, .resource-links { margin-top: auto; }
+.resource-links { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+.curriculum-note { margin: 0 1.25rem 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.curriculum-note h5 { font-size: 0.86rem; font-weight: 600; margin-bottom: 0.35rem; }
+.curriculum-note p { color: var(--text-muted); font-size: 0.88rem; }
 
 /*
 ========================================
@@ -590,6 +617,12 @@ h3 + .subsection-heading, .section-lede + .subsection-heading { margin-top: 0.5r
 .award-list li:first-child, .service-list li:first-child { padding-top: 0.25rem; }
 .award-list li:last-child, .service-list li:last-child { border-bottom: none; }
 .award-org { color: var(--text-muted); font-size: 0.9rem; }
+.service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 2.5rem; margin-top: 2.5rem; }
+.service-group { min-width: 0; }
+.service-group .subsection-heading { margin-top: 0; line-height: 1.6; }
+.service-list strong { display: block; line-height: 1.5; }
+.service-date { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+.service-list p { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem; }
 
 /*
 ========================================
@@ -647,6 +680,10 @@ h3 + .subsection-heading, .section-lede + .subsection-heading { margin-top: 0.5r
     .working-papers .pub-year { margin-bottom: 0.35rem; }
     .section-header { align-items: flex-start; }
     .story-content { font-size: 1.05rem; }
+    .resource-grid, .service-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .teaching-highlights { gap: 0.65rem; }
+    .teaching-highlights > div + div { padding-left: 0.65rem; }
+    .teaching-highlights dd { font-size: 0.75rem; }
 }
 
 /*
@@ -697,7 +734,9 @@ h3 + .subsection-heading, .section-lede + .subsection-heading { margin-top: 0.5r
     .profile-image { box-shadow: none; }
 
     h3 { page-break-after: avoid; }
-    .timeline-item, .pub-item, .talk-item, .card { page-break-inside: avoid; }
+    .timeline-item, .pub-item, .talk-item, .card, .resource-item, .service-group { page-break-inside: avoid; }
+    .resource-grid, .service-grid { display: block; }
+    .resource-item, .service-group { margin-bottom: 1rem; }
 
     details > *:not(summary) { display: block !important; }
     .year-group, .pub-abstract, .content-disclosure, .consulting-content, .card { border-color: #ccc; }
