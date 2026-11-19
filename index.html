@@ -70,7 +70,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css?v=f78cadbd48">
+    <link rel="stylesheet" href="styles.css?v=24d75bfd60">
 </head>
 
 <body>
@@ -88,15 +88,11 @@
             </button>
             <nav class="main-nav" aria-label="Main Navigation">
                 <ul id="navigation-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#news">Updates</a></li>
-                    <li><a href="#story">My Story</a></li>
-                    <li><a href="#expertise">Expertise</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#teaching">Teaching</a></li>
                     <li><a href="#research">Research</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#awards">Awards &amp; Service</a></li>
+                    <li><a href="#teaching">Teaching &amp; Tools</a></li>
+                    <li><a href="#speaking">Speaking &amp; Workshops</a></li>
+                    <li><a href="#story">About</a></li>
+                    <li><a href="#news">Updates</a></li>
                 </ul>
             </nav>
         </div>
@@ -109,14 +105,16 @@
             <div class="profile-grid">
                 <div class="profile-image-container">
                     <picture>
-                        <source type="image/webp" srcset="assets/profile-600.webp 600w, assets/profile-1200.webp 1200w" sizes="(max-width: 720px) 240px, 300px">
-                        <img src="assets/profile-600.jpg" srcset="assets/profile-600.jpg 600w, assets/profile-1200.jpg 1200w" sizes="(max-width: 720px) 240px, 300px"
+                        <source type="image/webp" srcset="assets/profile-600.webp 600w, assets/profile-1200.webp 1200w" sizes="(max-width: 720px) 120px, 300px">
+                        <img src="assets/profile-600.jpg" srcset="assets/profile-600.jpg 600w, assets/profile-1200.jpg 1200w" sizes="(max-width: 720px) 120px, 300px"
                             width="600" height="750" alt="John Garcia in his office, holding an “I love my job” mug" class="profile-image" fetchpriority="high" decoding="async">
                     </picture>
                 </div>
                 <div class="profile-content">
-                    <p class="title">Associate Professor of Finance &amp; Analytics<span class="affiliation"><a href="https://www.callutheran.edu/" target="_blank" rel="noopener noreferrer">California Lutheran University</a></span></p>
-                    <h2 class="name">John Garcia</h2>
+                    <div class="profile-heading">
+                        <p class="title">Associate Professor of Finance &amp; Analytics<span class="affiliation"><a href="https://www.callutheran.edu/" target="_blank" rel="noopener noreferrer">California Lutheran University</a></span></p>
+                        <h2 class="name">John Garcia</h2>
+                    </div>
 
                     <div class="bio">
                         <p class="tagline">From immigrant field worker roots to finance researcher — bridging industry
@@ -126,7 +124,10 @@
 
                     <div class="hero-actions">
                         <a href="#research" class="button">Explore Research <span aria-hidden="true">&rarr;</span></a>
-                        <a href="assets/John_Garcia_CV.pdf" class="button button-outline" target="_blank" rel="noopener noreferrer">Download CV</a>
+                        <div class="cv-action">
+                            <a href="assets/John_Garcia_CV.pdf?v=2026-11" class="button button-outline" target="_blank" rel="noopener noreferrer" aria-describedby="cv-revision">View CV (PDF)</a>
+                            <span id="cv-revision">Updated November 2026</span>
+                        </div>
                     </div>
                     <div class="contact-links profile-links">
                         <a href="mailto:jgarcia@callutheran.edu" class="profile-link">Email Me</a>
@@ -146,6 +147,23 @@
                     </div>
                 </div>
             </div>
+            <aside class="featured-work" aria-labelledby="featured-work-title">
+                <h3 id="featured-work-title">Selected work</h3>
+                <div class="featured-grid">
+                    <article>
+                        <p class="resource-label">Finance research · Working paper</p>
+                        <h4><a href="#algorithmic-anchoring">Algorithmic Anchoring</a></h4>
+                        <p>How much can a number in a prompt move an AI model’s equity valuation? I tested that question across three large language models.</p>
+                        <a class="feature-action" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6366838" target="_blank" rel="noopener noreferrer">Read the working paper <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article>
+                        <p class="resource-label">Teaching tool</p>
+                        <h4><a href="#colloquy">Colloquy</a></h4>
+                        <p>I built Colloquy for oral defenses at Cal Lutheran. Students explain their submitted work aloud, and their instructors review the responses.</p>
+                        <a class="feature-action" href="https://colloquy.chat/" target="_blank" rel="noopener noreferrer">Open Colloquy <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+            </aside>
         </section>
 
         <!-- Recent News Section -->
@@ -373,228 +391,6 @@
             </details>
         </section>
 
-        <!-- My Story Section -->
-        <section id="story" class="story-section bg-default container">
-            <h3>My Story</h3>
-            <div class="story-content">
-                <p>My story begins in a family shaped by sacrifice, hard work, and the belief that education could open doors. I was born in Los Angeles to immigrant parents and grew up between California and Mexico, becoming the first in my family to graduate from high school and college. Those roots still shape how I see the world. </p>
-                <p>Before entering academia, I spent more than two decades in finance and analytics leadership roles at Ernst &amp; Young and Toyota, where I learned how data, strategy, and judgment drive real decisions. But at a certain point, I felt called to build something different with the second half of my career. I earned a doctorate and moved into higher education because I wanted to invest in people, not just performance. </p>
-                <p>Today, as a finance and analytics professor, my work brings together research, teaching, and real-world experience in behavioral finance, machine learning, and AI. At the center of all of it is a simple idea: where you start should never define where you can go.</p>
-            </div>
-        </section>
-
-
-        <!-- Areas of Expertise Section -->
-        <section id="expertise" class="expertise-section bg-alternate container">
-            <h3>Areas of Expertise</h3>
-            <div class="expertise-categories">
-                <h4 class="subsection-heading">Finance &amp; Strategy</h4>
-                <ul class="tag-list tag-warm">
-                    <li class="tag">Corporate Finance</li>
-                    <li class="tag">Behavioral Finance</li>
-                    <li class="tag">Financial Analysis &amp; Reporting</li>
-                    <li class="tag">Financial Distress</li>
-                    <li class="tag">Pricing Strategy</li>
-                </ul>
-
-                <h4 class="subsection-heading">Analytics &amp; Technology</h4>
-                <ul class="tag-list tag-cool">
-                    <li class="tag">Business Analytics</li>
-                    <li class="tag">Machine Learning</li>
-                    <li class="tag">Data Mining</li>
-                    <li class="tag">FinTech</li>
-                    <li class="tag">Generative AI Literacy</li>
-                </ul>
-
-                <h4 class="subsection-heading">Interdisciplinary Focus</h4>
-                <ul class="tag-list">
-                    <li class="tag">AI in Education</li>
-                    <li class="tag">Diversity, Equity &amp; Inclusion in the Workplace</li>
-                </ul>
-            </div>
-        </section>
-
-
-        <!-- Education Section -->
-        <section id="education" class="education-section bg-default container">
-            <h3>Education &amp; Credentials</h3>
-            <ul class="timeline-list">
-                <li class="timeline-item">
-                    <span class="timeline-year">2020</span>
-                    <div class="timeline-content">
-                        <strong>Doctorate in Business Administration (Finance &amp; Analytics)</strong>
-                        <span class="timeline-org">Creighton University</span>
-                        <p class="timeline-detail">Dissertation: <a
-                                href="https://cdr.creighton.edu/items/351cae75-381a-475f-8a06-7c44751a880d"
-                                target="_blank" rel="noopener noreferrer"><em>&ldquo;Measuring The Effect of Investor
-                                    Sentiment on Liquidity and Financial Distress&rdquo;</em></a></p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-content">
-                        <strong>Master of Science in Predictive Analytics</strong>
-                        <span class="timeline-org">Northwestern University</span>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2000</span>
-                    <div class="timeline-content">
-                        <strong>Master of Science in Accountancy</strong>
-                        <span class="timeline-org">University of Notre Dame</span>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">1999</span>
-                    <div class="timeline-content">
-                        <strong>B.S. Business Administration</strong>
-                        <span class="timeline-org">California Polytechnic State University, SLO</span>
-                        <p class="timeline-detail">Magna cum laude</p>
-                    </div>
-                </li>
-            </ul>
-
-
-            <!-- Certifications -->
-            <h4 class="subsection-heading">Certifications &amp; Programs</h4>
-            <ul class="tag-list">
-                <li class="tag">Certified Analytics Professional (CAP)</li>
-                <li class="tag">CPA (Inactive, CA)</li>
-                <li class="tag">Associate in Captive Insurance (ACI)</li>
-            </ul>
-            <p class="credential-note">Toyota Next Gen Executive Leadership Program &middot; University of Michigan, 2018</p>
-        </section>
-
-
-        <!-- Teaching Section -->
-        <section id="teaching" class="teaching-section bg-alternate container">
-            <h3>Teaching</h3>
-            <div class="teaching-content">
-                <p class="section-lede">I teach finance and analytics across undergraduate, MBA, and EMBA programs, bringing industry experience, behavioral finance, and AI into the classroom. I co-created Cal Lutheran&rsquo;s undergraduate Data Science program and build tools that support students and fellow educators.</p>
-                <dl class="teaching-highlights" aria-label="Teaching accomplishments since Fall 2021">
-                    <div><dt>48</dt><dd>courses taught since Fall 2021</dd></div>
-                    <div><dt>4.7 / 5</dt><dd>mean student rating &middot; median 5.0</dd></div>
-                    <div><dt>10</dt><dd>new courses developed</dd></div>
-                </dl>
-                <p class="teaching-impact">Course-specific AI tutors I developed are accessed over 1,000 times monthly by students. Figures updated October 2026.</p>
-
-                <h4 id="teaching-resources" class="subsection-heading">Tools, Faculty Development &amp; Workshops</h4>
-                <div class="resource-grid">
-                    <article class="resource-item">
-                        <p class="resource-label">Faculty development</p>
-                        <h5>Teaching with Artificial Intelligence</h5>
-                        <p>A free, self-paced course helping instructors make defensible choices about AI and build a teaching-ready portfolio.</p>
-                        <a href="https://www.teachingwithai.app/" target="_blank" rel="noopener noreferrer">Explore the Course <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-                    <article class="resource-item">
-                        <p class="resource-label">Faculty mentoring</p>
-                        <h5>Business Pathways</h5>
-                        <p>A six-hour mentor training program adopted by the School of Management and College of Arts and Sciences in 2026.</p>
-                        <a href="https://drive.google.com/drive/folders/10Ehii7tlFJ6uGQgjfDnoJSOk29q31qtd?usp=sharing" target="_blank" rel="noopener noreferrer">View Open-Source Materials <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-                    <article class="resource-item">
-                        <p class="resource-label">Student learning</p>
-                        <h5>College Success Companion</h5>
-                        <p>Chapter summaries, flashcards, reflection activities, and a study chatbot, developed for first-year students and adopted by all First Year Seminar faculty.</p>
-                        <a href="https://clu-college-success.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the App <span aria-hidden="true">&rarr;</span></a>
-                    </article>
-                    <article class="resource-item">
-                        <p class="resource-label">Speaking &amp; workshops</p>
-                        <h5>From Chatbots to AI Agents</h5>
-                        <p>An interactive Leadership Conejo talk and practice lab for community leaders to delegate tasks, check sources, and test AI workflows.</p>
-                        <div class="resource-links">
-                            <a href="https://chatbots-to-agents.vercel.app/" target="_blank" rel="noopener noreferrer">Try the Practice Lab <span aria-hidden="true">&rarr;</span></a>
-                            <a href="https://bit.ly/47opnUp" target="_blank" rel="noopener noreferrer">View Slides <span aria-hidden="true">&rarr;</span></a>
-                        </div>
-                    </article>
-                </div>
-                
-                <details class="content-disclosure course-catalog">
-                    <summary>Explore the courses I teach <span class="disclosure-count">12 courses</span></summary>
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">EMBA</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">EMBA 502</span>
-                        <h4 class="course-title">Strategic Decision Making for High Performance</h4>
-                        <p>Single continuous case (RegalTel churn crisis) runs all 8 weeks through a full descriptive &rarr; predictive &rarr; prescriptive pipeline (Tableau, JMP Pro, board capstone); builds executives as analytics consumers, not practitioners.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">ECON 562 / MBA 580</span>
-                        <h4 class="course-title">Advanced Analytics</h4>
-                        <p>The most technically demanding course I teach &mdash; covering neural networks, ensemble methods, and model deployment &mdash; yet consistently earns 5.0 / 5.0 instructor ratings.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">MBA 526</span>
-                        <h4 class="course-title">Foundations of Analytics</h4>
-                        <p>Students replicate analysis from my published research (PCA in Applied Finance Letters), bridging academic rigor with live business data using JMP Pro.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span></div>
-                        <span class="course-code">MBA 541</span>
-                        <h4 class="course-title">Strategic Financial Analysis</h4>
-                        <p>Connects advanced valuation and financial modeling to strategic decision-making; draws directly on industry experience from Toyota and Ernst &amp; Young.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span></div>
-                        <span class="course-code">MBA 521</span>
-                        <h4 class="course-title">Corporate Finance</h4>
-                        <p>Grounds corporate finance theory in real-world capital markets, with emphasis on analytical frameworks for complex organizational decisions.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">MBA 503</span>
-                        <h4 class="course-title">Foundations of Business Statistics</h4>
-                        <p>Features AI-generated podcast-style chapter reviews and avatar-delivered intro lectures to extend learning beyond the classroom for working professionals.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">MBA5STI</span>
-                        <h4 class="course-title">Innovations in FinTech</h4>
-                        <p>One of the first FinTech courses in the region; integrates blockchain, robo-advising, and AI in financial services with guest practitioners.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Undergraduate</span></div>
-                        <span class="course-code">BUS 391</span>
-                        <h4 class="course-title">Principles of Finance</h4>
-                        <p>Consistently maintains a waitlist; AI Finance Tutor handles 600+ student queries per month, and multimodal resources include Excel toolkits, AI-generated podcasts, and recorded lectures.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">BUS 356</span>
-                        <h4 class="course-title">Business Analytics II</h4>
-                        <p>Advances students into predictive modeling (regression through neural networks) using R and Python; paired with a course-specific AI tutor that students rate more helpful than the textbook.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">BUS 256</span>
-                        <h4 class="course-title">Business Analytics I</h4>
-                        <p>Gateway analytics course now required for all business majors; builds the statistical mindset and data fluency that BUS 356 builds upon.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">BUS 151</span>
-                        <h4 class="course-title">Introduction to Business</h4>
-                        <p>Introduces the major functions of business and connects foundational concepts to decisions organizations face.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
-                        <span class="course-code">UNIV-3ST</span>
-                        <h4 class="course-title">Generative AI Literacy</h4>
-                        <p>Cross-disciplinary course &mdash; one of the first at Cal Lutheran &mdash; equipping students to use, evaluate, and critically assess AI tools in academic and professional contexts.</p>
-                    </div>
-                </div>
-                
-                <p class="card-note"><span class="course-flag">Developed</span> marks a course developed or significantly redesigned by John Garcia.</p>
-                <div class="curriculum-note">
-                    <h5>Additional curriculum development</h5>
-                    <p>Machine Learning I, Machine Learning in Practice, and Personal Finance &amp; Investing in the Digital Age.</p>
-                </div>
-                </details>
-            </div>
-        </section>
-
         <!-- Research & Publications Section -->
         <section id="research" class="research-section bg-default container">
             <h3>Research &amp; Publications</h3>
@@ -624,19 +420,21 @@
 
             <h4 id="working-papers" class="subsection-heading">Current Projects &amp; Working Papers</h4>
             <ol class="publication-list working-papers">
-                <li class="pub-item">
+                <li class="pub-item" id="distress-and-portfolio-risk">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7615736" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                        <strong>&ldquo;Expressed Distress and Portfolio Risk in LLM Investment Advice&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7615736" target="_blank" rel="noopener noreferrer">&ldquo;Expressed Distress and Portfolio Risk in LLM Investment Advice&rdquo;</a></strong>
                         <span class="pub-authors">Garcia, J.</span>
                         <div class="pub-journal">
                             <em>Journal of Behavioral and Experimental Finance</em>
                             <p class="pub-summary">In a preregistered experiment, distressed wording reduced how often three chatbots recommended portfolios above a risk level matched to stated tolerance; warnings about the remaining risk varied widely.</p>
                         </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#distress-and-portfolio-risk" aria-label="Link to entry for Expressed Distress and Portfolio Risk">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="social-signals-and-loss-realization">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
                         <strong>&ldquo;Social Signals, Trading Guidance, and Loss Realization in Three LLM Trading Systems&rdquo;</strong>
@@ -645,33 +443,40 @@
                             <em>Finance Research Letters</em>
                             <p class="pub-summary">Examines how social signals and trading guidance relate to loss realization in three LLM trading systems.</p>
                         </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#social-signals-and-loss-realization" aria-label="Link to entry for Social Signals and Loss Realization">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="are-aliases-neutral">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
-                        <a href="https://ssrn.com/abstract=7532416" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                        <strong>&ldquo;Are Aliases Neutral? Company-Name Form in LLM Equity Valuation&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://ssrn.com/abstract=7532416" target="_blank" rel="noopener noreferrer">&ldquo;Are Aliases Neutral? Company-Name Form in LLM Equity Valuation&rdquo;</a></strong>
                         <span class="pub-authors">Garcia, J.</span>
                         <div class="pub-journal">
                             <em>Journal of Behavioral and Experimental Finance</em>
                             <p class="pub-summary">Tests whether invented company names are neutral inputs in LLM equity valuation.</p>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <span class="pub-year">Under Review</span>
-                    <div class="pub-content">
-                        <a href="https://papers.ssrn.com/abstract=6366838" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                        <strong>&ldquo;Algorithmic Anchoring: How Prompt-Embedded Reference Points Bias LLM Financial Estimates&rdquo;</strong>
-                        <span class="pub-authors">Garcia, J.</span>
-                        <div class="pub-journal">
-                            <em>Journal of Computational Social Science</em>
-                            <p class="pub-summary">Tests how numerical reference points embedded in prompts influence LLM financial estimates.</p>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#are-aliases-neutral" aria-label="Link to entry for Are Aliases Neutral?">Link to entry</a>
                         </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="algorithmic-anchoring">
+                    <span class="pub-year">Under Review</span>
+                    <div class="pub-content">
+                        <strong><a class="pub-title-link" href="https://papers.ssrn.com/abstract=6366838" target="_blank" rel="noopener noreferrer">&ldquo;Algorithmic Anchoring: How Prompt-Embedded Reference Points Bias LLM Financial Estimates&rdquo;</a></strong>
+                        <span class="pub-authors">Garcia, J.</span>
+                        <div class="pub-journal">
+                            <em>Journal of Computational Social Science</em>
+                            <p class="pub-summary">In a controlled experiment with three large language models, equity valuations were 52% more sensitive to a number when the prompt labeled it as a prior AI estimate.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#algorithmic-anchoring" aria-label="Link to entry for Algorithmic Anchoring">Link to entry</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="pub-item" id="attention-and-variance-risk-premium">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
                         <strong>&ldquo;Investor Attention and the Variance Risk Premium: Predictive Content from Search, News, and Social Media&rdquo;</strong>
@@ -680,43 +485,50 @@
                             <em>Quarterly Review of Economics and Finance</em>
                             <p class="pub-summary">Examines whether attention measured through search, news, and social media predicts the variance risk premium.</p>
                         </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#attention-and-variance-risk-premium" aria-label="Link to entry for Investor Attention and the Variance Risk Premium">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="which-number-is-sticky">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
-                        <a href="https://papers.ssrn.com/abstract=7411618" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                        <strong>&ldquo;Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://papers.ssrn.com/abstract=7411618" target="_blank" rel="noopener noreferrer">&ldquo;Which Number Is Sticky? What Survives Source Withdrawal in Sequential LLM Financial Analysis&rdquo;</a></strong>
                         <span class="pub-authors">Garcia, J.</span>
                         <div class="pub-journal">
                             <em>Computational Economics</em>
-                            <p class="pub-summary">Studies whether earlier numerical estimates continue to influence LLM financial analysis after their source is withdrawn.</p>
+                            <p class="pub-summary">In a preregistered experiment, bias from an earlier valuation persisted even after the model was told that the original source was invalid.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#which-number-is-sticky" aria-label="Link to entry for Which Number Is Sticky?">Link to entry</a>
                         </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="llm-agents-in-financial-markets">
                     <span class="pub-year">Under Review</span>
                     <div class="pub-content">
-                        <div class="pub-links">
-                            <a href="https://ssrn.com/abstract=7549841" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                            <a href="https://llm-agents-financial-markets.vercel.app" class="pub-doi" target="_blank" rel="noopener noreferrer">Companion Website</a>
-                        </div>
-                        <strong>&ldquo;From Individual Decisions to Collective Outcomes: A Review of LLM Agents in Financial Markets&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://ssrn.com/abstract=7549841" target="_blank" rel="noopener noreferrer">&ldquo;From Individual Decisions to Collective Outcomes: A Review of LLM Agents in Financial Markets&rdquo;</a></strong>
                         <span class="pub-authors">Garcia, J.</span>
                         <div class="pub-journal">
                             <em>Journal of Computational Social Science</em>
                             <p class="pub-summary">Synthesizes 599 papers through a four-level framework connecting individual decisions, coordination, agent interaction, and validation of financial-market claims.</p>
                         </div>
+                        <div class="pub-links">
+                            <a href="https://llm-agents-financial-markets.vercel.app" class="pub-doi" target="_blank" rel="noopener noreferrer">Companion Website</a>
+                            <a class="pub-permalink" href="#llm-agents-in-financial-markets" aria-label="Link to entry for From Individual Decisions to Collective Outcomes">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="homo-silicus">
                     <span class="pub-year">Working Paper</span>
                     <div class="pub-content">
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5901742" class="pub-doi" target="_blank" rel="noopener noreferrer">SSRN</a>
-                        <strong>&ldquo;Homo Silicus is Hyper-Rational &mdash; Why LLM Agents Fail to Replicate Attention-Driven Trading&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5901742" target="_blank" rel="noopener noreferrer">&ldquo;Homo Silicus is Hyper-Rational &mdash; Why LLM Agents Fail to Replicate Attention-Driven Trading&rdquo;</a></strong>
                         <span class="pub-authors">Garcia, J.</span>
                         <div class="pub-journal">
                             <p class="pub-summary">Tests whether LLM agents reproduce the attention-driven trading patterns observed in human investors.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#homo-silicus" aria-label="Link to entry for Homo Silicus is Hyper-Rational">Link to entry</a>
                         </div>
                     </div>
                 </li>
@@ -725,130 +537,150 @@
             <!-- Publications list -->
             <h4 id="journal-articles" class="subsection-heading spaced">Peer-Reviewed Journal Articles</h4>
             <ol class="publication-list">
-                <li class="pub-item">
+                <li class="pub-item" id="same-benchmark-different-leverage-targets">
                     <span class="pub-year">2026</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.3390/ijfs14110290" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Same Benchmark, Different Leverage Targets: Robinhood Holder-Count Additions After Benchmark Gains and Declines&rdquo;</strong>
-                        <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>International Journal of Financial Studies</em>, 14(11), 290</span>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.3390/ijfs14110290" target="_blank" rel="noopener noreferrer">&ldquo;Same Benchmark, Different Leverage Targets: Robinhood Holder-Count Additions After Benchmark Gains and Declines&rdquo;</a></strong>
+                        <div class="pub-journal">
+                            <span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>International Journal of Financial Studies</em>, 14(11), 290
+                            <p class="pub-summary">The study found no conclusive evidence that Robinhood holder-count additions favored +3&times; funds over unlevered funds more after benchmark declines than after equally large gains.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#same-benchmark-different-leverage-targets" aria-label="Link to entry for Same Benchmark, Different Leverage Targets">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="attention-economy-of-retail-trading">
                     <span class="pub-year">2026</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1016/j.jbef.2026.101215" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;The Attention Economy of
-                            Retail Trading: Evidence from Robinhood and Social Media&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1016/j.jbef.2026.101215" target="_blank" rel="noopener noreferrer">&ldquo;The Attention Economy of Retail Trading: Evidence from Robinhood and Social Media&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Journal of Behavioral and Experimental Finance</em>, 51, 101215</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#attention-economy-of-retail-trading" aria-label="Link to entry for The Attention Economy of Retail Trading">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="cultural-buffers">
                     <span class="pub-year">2026</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1108/RBF-08-2025-0325" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Cultural Buffers Against Social-Media Noise: Religiosity and the Sentiment&ndash;Liquidity Link&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1108/RBF-08-2025-0325" target="_blank" rel="noopener noreferrer">&ldquo;Cultural Buffers Against Social-Media Noise: Religiosity and the Sentiment&ndash;Liquidity Link&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J., Lu-Andrews, R.</span> <span aria-hidden="true">&middot;</span> <em>Review of Behavioral Finance</em></span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#cultural-buffers" aria-label="Link to entry for Cultural Buffers Against Social-Media Noise">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="power-of-attention">
                     <span class="pub-year">2025</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1016/j.gfj.2025.101160" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;The Power of Attention: Examining The Roles
-                            of Institutional Investor and Macroeconomic News Attention in Shaping Share
-                            Liquidity&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1016/j.gfj.2025.101160" target="_blank" rel="noopener noreferrer">&ldquo;The Power of Attention: Examining The Roles of Institutional Investor and Macroeconomic News Attention in Shaping Share Liquidity&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Global Finance Journal</em>, 67, 101160</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#power-of-attention" aria-label="Link to entry for The Power of Attention">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="beyond-the-headlines">
                     <span class="pub-year">2025</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1016/j.gfj.2025.101126" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Beyond the Headlines: Sentiment Divergence
-                            and Financial Distress&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1016/j.gfj.2025.101126" target="_blank" rel="noopener noreferrer">&ldquo;Beyond the Headlines: Sentiment Divergence and Financial Distress&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Global Finance Journal</em>, 66, 101126</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#beyond-the-headlines" aria-label="Link to entry for Beyond the Headlines">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="sentiment-divergence-and-share-liquidity">
                     <span class="pub-year">2025</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.5281/zenodo.14957129" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Sentiment Divergence and its Impact on
-                            Share Liquidity&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.5281/zenodo.14957129" target="_blank" rel="noopener noreferrer">&ldquo;Sentiment Divergence and its Impact on Share Liquidity&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Multinational Finance Journal</em></span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#sentiment-divergence-and-share-liquidity" aria-label="Link to entry for Sentiment Divergence and its Impact on Share Liquidity">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="herding-the-crowds">
                     <span class="pub-year">2024</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1007/s11408-024-00447-4" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Herding the Crowds: How Sentiment Affects Crowdsourced Earnings Estimates&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1007/s11408-024-00447-4" target="_blank" rel="noopener noreferrer">&ldquo;Herding the Crowds: How Sentiment Affects Crowdsourced Earnings Estimates&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Financial Markets and Portfolio Management</em>, 38(3),
                             331&ndash;370</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#herding-the-crowds" aria-label="Link to entry for Herding the Crowds">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="financial-red-flags-on-glassdoor">
                     <span class="pub-year">2023</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.2308/JFAR-2022-008" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Do Employees Waive Financial Red Flags
-                            Through the Glassdoor?&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.2308/JFAR-2022-008" target="_blank" rel="noopener noreferrer">&ldquo;Do Employees Waive Financial Red Flags Through the Glassdoor?&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Dunham, L., Garcia, J., Grandstaff, J., Wei, S.</span> <span aria-hidden="true">&middot;</span> <em>Journal of Forensic Accounting Research</em>, 8(1),
                             160&ndash;187</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#financial-red-flags-on-glassdoor" aria-label="Link to entry for Do Employees Waive Financial Red Flags Through the Glassdoor?">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="measuring-valuation-uncertainty">
                     <span class="pub-year">2023</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.24135/afl.v12i1.605" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Measuring Valuation Uncertainty: A PCA
-                            Approach&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.24135/afl.v12i1.605" target="_blank" rel="noopener noreferrer">&ldquo;Measuring Valuation Uncertainty: A PCA Approach&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Applied Finance Letters</em>, 12(1), 12&ndash;21</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#measuring-valuation-uncertainty" aria-label="Link to entry for Measuring Valuation Uncertainty">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="analysts-stock-ratings">
                     <span class="pub-year">2022</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1080/10293523.2022.2108651" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Analysts&rsquo; Stock Ratings and the
-                            Predictive Value of News and Twitter Sentiment&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1080/10293523.2022.2108651" target="_blank" rel="noopener noreferrer">&ldquo;Analysts&rsquo; Stock Ratings and the Predictive Value of News and Twitter Sentiment&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Investment Analysts Journal</em>, 51(4), 236&ndash;252</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#analysts-stock-ratings" aria-label="Link to entry for Analysts’ Stock Ratings">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="bankruptcy-prediction">
                     <span class="pub-year">2022</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1016/j.mlwa.2022.100343" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Bankruptcy Prediction Using Synthetic Sampling&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1016/j.mlwa.2022.100343" target="_blank" rel="noopener noreferrer">&ldquo;Bankruptcy Prediction Using Synthetic Sampling&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Machine Learning with Applications</em>, 9, 100343</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#bankruptcy-prediction" aria-label="Link to entry for Bankruptcy Prediction Using Synthetic Sampling">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="analyst-herding">
                     <span class="pub-year">2021</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1007/s11408-021-00382-8" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Analyst Herding and Firm-Level Investor
-                            Sentiment&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1007/s11408-021-00382-8" target="_blank" rel="noopener noreferrer">&ldquo;Analyst Herding and Firm-Level Investor Sentiment&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Financial Markets and Portfolio Management</em>, 35(4),
                             461&ndash;494</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#analyst-herding" aria-label="Link to entry for Analyst Herding and Firm-Level Investor Sentiment">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="investor-sentiment-and-financial-distress">
                     <span class="pub-year">2021</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1108/MF-02-2021-0056" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Measuring the Effect of Investor Sentiment
-                            on Financial Distress&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1108/MF-02-2021-0056" target="_blank" rel="noopener noreferrer">&ldquo;Measuring the Effect of Investor Sentiment on Financial Distress&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Dunham, L., Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Managerial Finance</em>, 47(12), 1834&ndash;1852</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#investor-sentiment-and-financial-distress" aria-label="Link to entry for Measuring the Effect of Investor Sentiment on Financial Distress">Link to entry</a>
+                        </div>
                     </div>
                 </li>
-                <li class="pub-item">
+                <li class="pub-item" id="investor-sentiment-and-liquidity">
                     <span class="pub-year">2021</span>
                     <div class="pub-content">
-                        <a href="https://doi.org/10.1108/MF-06-2019-0265" class="pub-doi" target="_blank"
-                            rel="noopener noreferrer">DOI</a> <strong>&ldquo;Measuring the Effect of Investor Sentiment
-                            on Liquidity&rdquo;</strong>
+                        <strong><a class="pub-title-link" href="https://doi.org/10.1108/MF-06-2019-0265" target="_blank" rel="noopener noreferrer">&ldquo;Measuring the Effect of Investor Sentiment on Liquidity&rdquo;</a></strong>
                         <span class="pub-journal"><span class="pub-authors">Dunham, L., Garcia, J.</span> <span aria-hidden="true">&middot;</span> <em>Managerial Finance</em>, 47(1), 59&ndash;85</span>
+                        <div class="pub-links">
+                            <a class="pub-permalink" href="#investor-sentiment-and-liquidity" aria-label="Link to entry for Measuring the Effect of Investor Sentiment on Liquidity">Link to entry</a>
+                        </div>
                     </div>
                 </li>
             </ol>
@@ -1074,8 +906,258 @@
         </section>
 
 
+        <!-- Teaching Section -->
+        <section id="teaching" class="teaching-section bg-alternate container">
+            <h3>Teaching</h3>
+            <div class="teaching-content">
+                <p class="section-lede">I teach finance and analytics across undergraduate, MBA, and EMBA programs, bringing industry experience, behavioral finance, and AI into the classroom. I co-created Cal Lutheran&rsquo;s undergraduate Data Science program and build tools that support students and fellow educators.</p>
+                <dl class="teaching-highlights" aria-label="Teaching accomplishments since Fall 2021">
+                    <div><dt>48</dt><dd>courses taught since Fall 2021</dd></div>
+                    <div><dt>4.7 / 5</dt><dd>mean student rating &middot; median 5.0</dd></div>
+                    <div><dt>10</dt><dd>new courses developed</dd></div>
+                </dl>
+                <p class="teaching-impact">Course-specific AI tutors I developed are accessed over 1,000 times monthly by students. Figures updated October 2026.</p>
+
+                <h4 id="teaching-resources" class="subsection-heading">Teaching Tools &amp; Faculty Development</h4>
+                <div class="resource-grid">
+                    <article id="colloquy" class="resource-item">
+                        <p class="resource-label">Oral assessment</p>
+                        <h5>Colloquy</h5>
+                        <p>I built Colloquy for Cal Lutheran faculty who want students to explain their own work. Students answer three questions drawn from their report. Instructors review the answers and decide what grades and feedback to release.</p>
+                        <a href="https://colloquy.chat/instructors" target="_blank" rel="noopener noreferrer">Try Colloquy as an instructor <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="resource-item">
+                        <p class="resource-label">Faculty development</p>
+                        <h5>Teaching with Artificial Intelligence</h5>
+                        <p>A free, self-paced course helping instructors make defensible choices about AI and build a teaching-ready portfolio.</p>
+                        <a href="https://www.teachingwithai.app/" target="_blank" rel="noopener noreferrer">Explore the Course <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="resource-item">
+                        <p class="resource-label">Faculty mentoring</p>
+                        <h5>Business Pathways</h5>
+                        <p>A six-hour mentor training program adopted by the School of Management and College of Arts and Sciences in 2026.</p>
+                        <a href="https://drive.google.com/drive/folders/10Ehii7tlFJ6uGQgjfDnoJSOk29q31qtd?usp=sharing" target="_blank" rel="noopener noreferrer">View Open-Source Materials <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                    <article class="resource-item">
+                        <p class="resource-label">Student learning</p>
+                        <h5>College Success Companion</h5>
+                        <p>Chapter summaries, flashcards, reflection activities, and a study chatbot, developed for first-year students and adopted by all First Year Seminar faculty.</p>
+                        <a href="https://clu-college-success.vercel.app/" target="_blank" rel="noopener noreferrer">Explore the App <span aria-hidden="true">&rarr;</span></a>
+                    </article>
+                </div>
+
+                <details class="content-disclosure course-catalog">
+                    <summary>Explore the courses I teach <span class="disclosure-count">12 courses</span></summary>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">EMBA</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">EMBA 502</span>
+                        <h4 class="course-title">Strategic Decision Making for High Performance</h4>
+                        <p>Single continuous case (RegalTel churn crisis) runs all 8 weeks through a full descriptive &rarr; predictive &rarr; prescriptive pipeline (Tableau, JMP Pro, board capstone); builds executives as analytics consumers, not practitioners.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">ECON 562 / MBA 580</span>
+                        <h4 class="course-title">Advanced Analytics</h4>
+                        <p>The most technically demanding course I teach &mdash; covering neural networks, ensemble methods, and model deployment &mdash; yet consistently earns 5.0 / 5.0 instructor ratings.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA 526</span>
+                        <h4 class="course-title">Foundations of Analytics</h4>
+                        <p>Students replicate analysis from my published research (PCA in Applied Finance Letters), bridging academic rigor with live business data using JMP Pro.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span></div>
+                        <span class="course-code">MBA 541</span>
+                        <h4 class="course-title">Strategic Financial Analysis</h4>
+                        <p>Connects advanced valuation and financial modeling to strategic decision-making; draws directly on industry experience from Toyota and Ernst &amp; Young.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span></div>
+                        <span class="course-code">MBA 521</span>
+                        <h4 class="course-title">Corporate Finance</h4>
+                        <p>Grounds corporate finance theory in real-world capital markets, with emphasis on analytical frameworks for complex organizational decisions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA 503</span>
+                        <h4 class="course-title">Foundations of Business Statistics</h4>
+                        <p>Features AI-generated podcast-style chapter reviews and avatar-delivered intro lectures to extend learning beyond the classroom for working professionals.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Graduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">MBA5STI</span>
+                        <h4 class="course-title">Innovations in FinTech</h4>
+                        <p>One of the first FinTech courses in the region; integrates blockchain, robo-advising, and AI in financial services with guest practitioners.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Undergraduate</span></div>
+                        <span class="course-code">BUS 391</span>
+                        <h4 class="course-title">Principles of Finance</h4>
+                        <p>Consistently maintains a waitlist; AI Finance Tutor handles 600+ student queries per month, and multimodal resources include Excel toolkits, AI-generated podcasts, and recorded lectures.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">BUS 356</span>
+                        <h4 class="course-title">Business Analytics II</h4>
+                        <p>Advances students into predictive modeling (regression through neural networks) using R and Python; paired with a course-specific AI tutor that students rate more helpful than the textbook.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">BUS 256</span>
+                        <h4 class="course-title">Business Analytics I</h4>
+                        <p>Gateway analytics course now required for all business majors; builds the statistical mindset and data fluency that BUS 356 builds upon.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">BUS 151</span>
+                        <h4 class="course-title">Introduction to Business</h4>
+                        <p>Introduces the major functions of business and connects foundational concepts to decisions organizations face.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-meta"><span class="course-level">Undergraduate</span><span class="course-flag" title="Course developed or significantly redesigned by John Garcia">Developed</span></div>
+                        <span class="course-code">UNIV-3ST</span>
+                        <h4 class="course-title">Generative AI Literacy</h4>
+                        <p>Cross-disciplinary course &mdash; one of the first at Cal Lutheran &mdash; equipping students to use, evaluate, and critically assess AI tools in academic and professional contexts.</p>
+                    </div>
+                </div>
+
+                <p class="card-note"><span class="course-flag">Developed</span> marks a course developed or significantly redesigned by John Garcia.</p>
+                <div class="curriculum-note">
+                    <h5>Additional curriculum development</h5>
+                    <p>Machine Learning I, Machine Learning in Practice, and Personal Finance &amp; Investing in the Digital Age.</p>
+                </div>
+                </details>
+
+                <div id="speaking">
+                    <h4 class="subsection-heading spaced">Speaking &amp; Workshops</h4>
+                    <div class="resource-grid">
+                        <article class="resource-item">
+                            <p class="resource-label">Community leaders</p>
+                            <h5>From Chatbots to AI Agents</h5>
+                            <p>At Leadership Conejo, participants used the practice lab to delegate grant research to an AI agent and check its sources.</p>
+                            <div class="resource-links">
+                                <a href="https://chatbots-to-agents.vercel.app/" target="_blank" rel="noopener noreferrer">Try the practice lab <span aria-hidden="true">&rarr;</span></a>
+                                <a href="https://drive.google.com/file/d/1u5LASCg-o9WUvXEzGfGm9vwPKldPnc7a/view?usp=sharing" target="_blank" rel="noopener noreferrer">View the Leadership Conejo slides <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </article>
+                        <article class="resource-item">
+                            <p class="resource-label">Researchers &amp; educators</p>
+                            <h5>Too Smart to be Human</h5>
+                            <p>In this NSF ACCESS Regional AI Workshop talk, I tested whether AI agents buy stocks that attract attention the way human investors do.</p>
+                            <div class="resource-links">
+                                <a href="https://www.youtube.com/watch?v=X-3_0X6_3lo" target="_blank" rel="noopener noreferrer">Watch the recording <span aria-hidden="true">&rarr;</span></a>
+                                <a href="https://events.isi.edu/socalai-2026/socal-ai26-lt1-garcia-smart-human.pdf" target="_blank" rel="noopener noreferrer">View the NSF slides (PDF) <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </article>
+                    </div>
+                    <a href="mailto:jgarcia@callutheran.edu?subject=Speaking%20invitation" class="button">Invite me to speak</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Story Section -->
+        <section id="story" class="story-section bg-default container">
+            <h3>About Me</h3>
+            <nav class="section-nav" aria-label="Background and credentials">
+                <a href="#expertise">Expertise</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience &amp; Consulting</a>
+                <a href="#awards">Awards &amp; Service</a>
+            </nav>
+            <div class="story-content">
+                <p>My story begins in a family shaped by sacrifice, hard work, and the belief that education could open doors. I was born in Los Angeles to immigrant parents and grew up between California and Mexico, becoming the first in my family to graduate from high school and college. Those roots still shape how I see the world. </p>
+                <p>Before entering academia, I spent more than two decades in finance and analytics leadership roles at Ernst &amp; Young and Toyota, where I learned how data, strategy, and judgment drive real decisions. But at a certain point, I felt called to build something different with the second half of my career. I earned a doctorate and moved into higher education because I wanted to invest in people, not just performance. </p>
+                <p>Today, as a finance and analytics professor, my work brings together research, teaching, and real-world experience in behavioral finance, machine learning, and AI. At the center of all of it is a simple idea: where you start should never define where you can go.</p>
+            </div>
+        </section>
+
+
+        <!-- Areas of Expertise Section -->
+        <section id="expertise" class="expertise-section bg-alternate container" data-nav-section="story">
+            <h3>Areas of Expertise</h3>
+            <div class="expertise-categories">
+                <h4 class="subsection-heading">Finance &amp; Strategy</h4>
+                <ul class="tag-list tag-warm">
+                    <li class="tag">Corporate Finance</li>
+                    <li class="tag">Behavioral Finance</li>
+                    <li class="tag">Financial Analysis &amp; Reporting</li>
+                    <li class="tag">Financial Distress</li>
+                    <li class="tag">Pricing Strategy</li>
+                </ul>
+
+                <h4 class="subsection-heading">Analytics &amp; Technology</h4>
+                <ul class="tag-list tag-cool">
+                    <li class="tag">Business Analytics</li>
+                    <li class="tag">Machine Learning</li>
+                    <li class="tag">Data Mining</li>
+                    <li class="tag">FinTech</li>
+                    <li class="tag">Generative AI Literacy</li>
+                </ul>
+
+                <h4 class="subsection-heading">Interdisciplinary Focus</h4>
+                <ul class="tag-list">
+                    <li class="tag">AI in Education</li>
+                    <li class="tag">Diversity, Equity &amp; Inclusion in the Workplace</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Education Section -->
+        <section id="education" class="education-section bg-default container" data-nav-section="story">
+            <h3>Education &amp; Credentials</h3>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <span class="timeline-year">2020</span>
+                    <div class="timeline-content">
+                        <strong>Doctorate in Business Administration (Finance &amp; Analytics)</strong>
+                        <span class="timeline-org">Creighton University</span>
+                        <p class="timeline-detail">Dissertation: <a
+                                href="https://cdr.creighton.edu/items/351cae75-381a-475f-8a06-7c44751a880d"
+                                target="_blank" rel="noopener noreferrer"><em>&ldquo;Measuring The Effect of Investor
+                                    Sentiment on Liquidity and Financial Distress&rdquo;</em></a></p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2017</span>
+                    <div class="timeline-content">
+                        <strong>Master of Science in Predictive Analytics</strong>
+                        <span class="timeline-org">Northwestern University</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">2000</span>
+                    <div class="timeline-content">
+                        <strong>Master of Science in Accountancy</strong>
+                        <span class="timeline-org">University of Notre Dame</span>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-year">1999</span>
+                    <div class="timeline-content">
+                        <strong>B.S. Business Administration</strong>
+                        <span class="timeline-org">California Polytechnic State University, SLO</span>
+                        <p class="timeline-detail">Magna cum laude</p>
+                    </div>
+                </li>
+            </ul>
+
+
+            <!-- Certifications -->
+            <h4 class="subsection-heading">Certifications &amp; Programs</h4>
+            <ul class="tag-list">
+                <li class="tag">Certified Analytics Professional (CAP)</li>
+                <li class="tag">CPA (Inactive, CA)</li>
+                <li class="tag">Associate in Captive Insurance (ACI)</li>
+            </ul>
+            <p class="credential-note">Toyota Next Gen Executive Leadership Program &middot; University of Michigan, 2018</p>
+        </section>
+
+
         <!-- Professional Experience Section -->
-        <section id="experience" class="experience-section bg-alternate container">
+        <section id="experience" class="experience-section bg-alternate container" data-nav-section="story">
             <h3>Professional Experience</h3>
 
             <!-- Academic Positions -->
@@ -1487,7 +1569,7 @@
 
 
         <!-- Awards & Service Section -->
-        <section id="awards" class="awards-section bg-default container">
+        <section id="awards" class="awards-section bg-default container" data-nav-section="story">
             <h3>Awards &amp; Service</h3>
 
             <h4 class="subsection-heading">Recognition</h4>
@@ -1565,7 +1647,7 @@
         </div>
     </footer>
 
-    <script src="app.js?v=69e6a5ef38"></script>
+    <script src="app.js?v=2c2dbb8b68"></script>
 </body>
 
 </html>
